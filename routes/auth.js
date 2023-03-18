@@ -58,7 +58,9 @@ router.post(
 
 /* Logout. */
 router.get('/logout', function (req, res) {
-  req.logout();
+  req.logout((res)=>{
+    console.log(res)
+  });
   req.flash('success', 'You are now logged out.');
   res.redirect('/app/auth/login');
 });

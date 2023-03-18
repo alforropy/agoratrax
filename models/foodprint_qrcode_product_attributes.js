@@ -30,18 +30,18 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false,
       },
     },
-    {
-      sequelize,
-      tableName: 'foodprint_qrcode_product_attributes',
-      timestamps: false,
-      indexes: [
-        {
-          name: 'foodprint_qrcode_PRIMARY',
-          unique: true,
-          using: 'BTREE',
-          fields: [{ name: 'pk' }],
-        },
-      ],
-    }
+    // {
+    //   sequelize,
+    //   tableName: 'foodprint_qrcode_product_attributes',
+    //   timestamps: false,
+    //   indexes: [
+    //     {
+    //       name: 'foodprint_qrcode_PRIMARY',
+    //       unique: true,
+    //       using: 'BTREE',
+    //       fields: [{ name: 'pk' }],
+    //     },
+    //   ],
+    // }
   );
 };
