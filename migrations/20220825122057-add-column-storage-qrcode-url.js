@@ -9,9 +9,9 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
 
-    await queryInterface.addColumn('foodprint_storage', 'qrcode_url', {
-      type: Sequelize.STRING,
-    });
+    // await queryInterface.addColumn('foodprint_storage', 'qrcode_url', {
+    //   type: Sequelize.STRING,
+    // });
   },
 
   async down(queryInterface, Sequelize) {
@@ -21,6 +21,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.removeColumn('foodprint_storage', 'qrcode_url');
+    // await queryInterface.removeColumn('foodprint_storage', 'qrcode_url');
   },
 };

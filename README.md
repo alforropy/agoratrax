@@ -320,7 +320,15 @@ Latest version of FoodPrint is integrated with the Algorand TestNet via the `alg
 | IE11, Edge                                                                                                                                                                                                      | Supported                                                                                                                                                                                                         | Supported                                                                                                                                                                                                     | Supported                                                                                                                                                                                                     | Supported                                                                                                                                                                                                                     | Supported                                                                                                                                                                                                                           | Supported                                                                                                                                                                                                 |
 
 
-AGORA
-db=agora
-password: admin
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'admin';
+
+
+mysql://agora:admin@localhost:3306/agora
+
+
+mysql -u root -p
+CREATE DATABASE agoratrax
+CREATE USER 'agoratrax'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'agoratrax'@'localhost' WITH GRANT OPTION;
+
+
+

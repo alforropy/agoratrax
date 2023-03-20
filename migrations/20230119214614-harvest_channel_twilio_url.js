@@ -8,16 +8,16 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface
-        .addColumn('foodprint_harvest', 'channel', {
-          type: Sequelize.STRING,
-        })
+    // await queryInterface
+        // .addColumn('foodprint_harvest', 'channel', {
+        //   type: Sequelize.STRING,
+        // })
 
-        .then(
-            await queryInterface.addColumn('foodprint_harvest', 'twilio_url', {
-              type: Sequelize.STRING,
-            })
-        )
+        // .then(
+        //     // await queryInterface.addColumn('foodprint_harvest', 'twilio_url', {
+        //     //   type: Sequelize.STRING,
+        //     // })
+        // )
   },
 
   async down(queryInterface, Sequelize) {
