@@ -3,20 +3,17 @@
 <!-- add immediately after body tag-->
 <div class="container-fluid header-container">
     <a href="/" class="logo-wrapper">
-        <img class="logo" src="/img/FoodPrintLogo.png" height="40px" align="left" vertical-align="middle" alt="logo">
-        <h2 class="probootstrap-logo">FoodPrint<span>.</span></h2>
+        <img class="logo" src="/img/agoratrax.png" height="40px" align="left" vertical-align="middle" alt="logo">
     </a>
 
     <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
     <div class="mobile-menu-overlay"></div>
-
+    <% if (page_name !=='login' ) { %>
     <nav role="navigation" class="probootstrap-nav hidden-xs">
         <ul class="probootstrap-main-nav">
-            <li <% if (page_name==='home' ) { %>class="active"
-                <% } %> ><a href="/">Home</a></li>
+            <li <% if (page_name==='home' ) { %>class="active"<% } %> ><a href="/">Home</a></li>
 
-
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown  <% if (page_name==='harvestlogbook' ) { %>active<% } %> ">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Track & Trace
             </a>
@@ -111,5 +108,6 @@
             </ul>
         </div>
     </nav>
+    <% } %>
 </div>
 <!-- END: header -->

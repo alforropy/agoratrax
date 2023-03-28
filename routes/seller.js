@@ -40,6 +40,7 @@ router.get(
             page_title: 'FoodPrint - Seller Logbook',
             data: rows,
             user: req.user,
+            roles: ROLES,
             filter_data: '',
             page_name: 'sellerlogbook',
           });
@@ -51,6 +52,7 @@ router.get(
             page_title: 'FoodPrint - Seller Logbook',
             data: '',
             filter_data: '',
+            roles: ROLES,
             user: req.user,
             page_name: 'sellerlogbook',
           });
@@ -60,6 +62,7 @@ router.get(
         message: 'You are not authorised to view this resource.',
         title: 'Error',
         user: req.user,
+        roles: ROLES,
         filter_data: '',
         page_name: 'error',
       });
@@ -90,6 +93,7 @@ router.get(
             page_title: 'FoodPrint - Seller Logbook Page',
             data: rows,
             user: req.user,
+            roles: ROLES,
             filter_data: req.params.range,
             page_name: 'sellerlogbook',
           });
@@ -100,6 +104,7 @@ router.get(
           res.render('sellerlogbook', {
             page_title: 'FoodPrint - Seller Logbook Page',
             data: '',
+            roles: ROLES,
             user: req.user,
             filter_data: '',
             page_name: 'sellerlogbook',

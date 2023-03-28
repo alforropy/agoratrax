@@ -557,6 +557,7 @@ router.post(
       res.render('dashboard_qrcode_static', {
         page_title: 'FoodPrint - QR Code Configuration Dashboard',
         data: '',
+        roles: ROLES,
         user: req.user,
         page_name: 'dashboard_qrcode_static',
       }); //should add error array here

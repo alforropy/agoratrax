@@ -275,6 +275,8 @@ router.get(
         message: 'You are not authorised to view this resource.',
         title: 'Error',
         user: req.user,
+        roles: ROLES,
+
         page_name: 'error',
       });
     }

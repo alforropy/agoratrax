@@ -29,7 +29,8 @@ router.get('/login', function (req, res) {
   if (req.user) {
     res.redirect('/');
   } else {
-    res.render('login', { title: 'FoodPrint - User Login', user: req.user, page_name: 'login' });
+    res.render('login', {
+      title: 'FoodPrint - User Login', user: req.user, page_name: 'login' });
   }
 });
 

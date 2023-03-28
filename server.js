@@ -256,9 +256,9 @@ router.get(
   require('connect-ensure-login').ensureLoggedIn({ redirectTo: '/app/auth/login' }),
   function (req, res) {
     if (req.user.role == ROLES.Admin || req.user.role == ROLES.Superuser) {
-      res.render('index', { user: req.user, page_name: 'home', admin_status: true });
+      res.render('index', { user: req.user, page_name: 'home', admin_status: true, roles: ROLES });
     } else {
-      res.render('index', { user: req.user, page_name: 'home', admin_status: false });
+      res.render('index', { user: req.user, page_name: 'home', admin_status: false , roles: ROLES});
     }
 
     //res.sendFile(path.join(__dirname+'/src/index.html')); //__dirname : It will resolve to your project folder.

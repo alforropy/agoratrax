@@ -211,17 +211,17 @@ body {
 }
 
 .login-header {
-    border: 1px solid #b2d430;
-    border-bottom: 1px solid #b2d430 !important;
+    border: 1px solid #00bd8b;
+    border-bottom: 1px solid #00bd8b !important;
     border-radius: 8px;
     padding: 0.5rem 1.5rem !important;
-    color: #b2d430 !important;
+    color: #00bd8b !important;
     font-weight: bold !important;
     transition: all 0.5s ease-in-out !important;
 }
 
 .login-header:hover {
-    background-color: #b2d430;
+    background-color: #00bd8b;
     color: #fff !important;
 }
 
@@ -275,7 +275,7 @@ body {
         color: #000000 !important;
     }
     .nav-item.dropdown .dropdown-menu a:hover {
-        color: #b2d430 !important;
+        color: #00bd8b !important;
     }
 }
 
@@ -450,7 +450,8 @@ body {
 }
 
 .home-dashboard .row .card .card-header .card-title i {
-    color: #b2d430;
+    /*color: #00bd8b;*/
+    color: #00bd8b;
 }
 
 @media only screen and (max-width: 800px) and (min-width: 550px) {
@@ -1675,7 +1676,7 @@ body {
     width: 40%;
     height: 3px;
     position: absolute;
-    background-color: #b2d430;
+    background-color: #00bd8b;
     left: 50%;
     transform: translate(-50%);
     bottom: -10px;
@@ -1702,7 +1703,7 @@ body {
         width: 40%;
         height: 3px;
         position: absolute;
-        background-color: #b2d430;
+        background-color: #00bd8b;
         left: 50%;
         transform: translate(-50%);
         bottom: -10px;
@@ -1727,7 +1728,7 @@ body {
         width: 40%;
         height: 2px;
         position: absolute;
-        background-color: #b2d430;
+        background-color: #00bd8b;
         left: 50%;
         transform: translate(-50%);
         bottom: -10px;
@@ -1752,7 +1753,7 @@ body {
         width: 40%;
         height: 2px;
         position: absolute;
-        background-color: #b2d430;
+        background-color: #00bd8b;
         left: 50%;
         transform: translate(-50%);
         bottom: -10px;
