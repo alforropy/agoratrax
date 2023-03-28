@@ -90,7 +90,7 @@ router.get(
             }*/
           }
           res.render('harvestlogbook', {
-            page_title: 'FoodPrint - Harvest Logbook',
+            page_title: 'Agoratrax - Harvest Logbook',
             data: rows,
             user: req.user,
             page_name: 'harvestlogbook',
@@ -100,7 +100,7 @@ router.get(
           console.log('All harvests err:' + err);
           req.flash('error', err);
           res.render('harvestlogbook', {
-            page_title: 'FoodPrint - Harvest Logbook',
+            page_title: 'Agoratrax - Harvest Logbook',
             data: '',
             user: req.user,
             page_name: 'harvestlogbook',
@@ -318,7 +318,7 @@ router.post(
           models.FoodprintHarvest.findAll(sql_search_condition)
             .then(rows => {
               res.render('harvestlogbook', {
-                page_title: 'FoodPrint - Harvest Logbook',
+                page_title: 'Agoratrax - Harvest Logbook',
                 success: false,
                 errors: e.array(),
                 data: rows,
@@ -330,7 +330,7 @@ router.post(
               console.log('All harvests err:' + err);
               req.flash('error', err.message);
               res.render('harvestlogbook', {
-                page_title: 'FoodPrint - Harvest Logbook',
+                page_title: 'Agoratrax - Harvest Logbook',
                 data: '',
                 user: req.user,
                 page_name: 'harvestlogbook',
@@ -738,7 +738,7 @@ router.post(
           models.FoodprintHarvest.findAll(sql_search_condition)
             .then(rows => {
               res.render('harvestlogbook', {
-                page_title: 'FoodPrint - Harvest Logbook',
+                page_title: 'Agoratrax - Harvest Logbook',
                 success: false,
                 errors: e.array(),
                 data: rows,
@@ -749,7 +749,7 @@ router.post(
             .catch(err => {
               req.flash('error', err.message);
               res.render('harvestlogbook', {
-                page_title: 'FoodPrint - Harvest Logbook',
+                page_title: 'Agoratrax - Harvest Logbook',
                 data: '',
                 user: req.user,
                 page_name: 'harvestlogbook',

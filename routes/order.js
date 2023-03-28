@@ -85,7 +85,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'Agoratrax - Order Dashboard',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -200,7 +200,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'Agoratrax - Order Dashboard',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -296,7 +296,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'Agoratrax - Order Dashboard',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -424,7 +424,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'Agoratrax - Order Dashboard',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -514,7 +514,7 @@ router.get(
                 finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
               }
               res.render('order_dashboard', {
-                title: 'FoodPrint - Order Dashboard',
+                title: 'Agoratrax - Order Dashboard',
                 bid_rows: bid_rows,
                 offer_rows: offer_rows,
                 //return list of produce
@@ -590,7 +590,7 @@ router.get(
                 finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
               }
               res.render('order_dashboard', {
-                title: 'FoodPrint - Order Dashboard',
+                title: 'Agoratrax - Order Dashboard',
                 bid_rows: bid_rows,
                 offer_rows: offer_rows,
                 //return list of produce
@@ -642,7 +642,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('order_dashboard', {
-        page_title: 'FoodPrint - Order Dashboard',
+        page_title: 'Agoratrax - Order Dashboard',
         data: '',
         page_name: 'order_dashboard',
       }); //should add error array here
@@ -730,7 +730,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('order_dashboard', {
-          page_title: 'FoodPrint - Order Dashboard',
+          page_title: 'Agoratrax - Order Dashboard',
           data: '',
           filter_data: '',
           filter_type: '',
@@ -760,7 +760,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('order_dashboard', {
-        page_title: 'FoodPrint - Order Dashboard',
+        page_title: 'Agoratrax - Order Dashboard',
         data: '',
         page_name: 'order_dashboard',
       }); //should add error array here
@@ -851,7 +851,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('order_dashboard', {
-          page_title: 'FoodPrint - Order Dashboard',
+          page_title: 'Agoratrax - Order Dashboard',
           data: '',
           filter_data: '',
           filter_type: '',
@@ -882,7 +882,7 @@ router.get(
       })
         .then(rows => {
           res.render('myorderlogbook', {
-            page_title: 'FoodPrint - Order Logbook',
+            page_title: 'Agoratrax - Order Logbook',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -893,7 +893,7 @@ router.get(
           console.log('All myorderlogbook err:' + err);
           req.flash('error', err);
           res.render('myorderlogbook', {
-            page_title: 'FoodPrint - Order Logbook',
+            page_title: 'Agoratrax - Order Logbook',
             data: '',
             filter_data: '',
             user: req.user,
@@ -913,7 +913,7 @@ router.get(
       })
         .then(rows => {
           res.render('myorderlogbook', {
-            page_title: 'FoodPrint - Order Logbook',
+            page_title: 'Agoratrax - Order Logbook',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -924,7 +924,7 @@ router.get(
           console.log('All myorderlogbook err:' + err);
           req.flash('error', err);
           res.render('myorderlogbook', {
-            page_title: 'FoodPrint - Order Logbook',
+            page_title: 'Agoratrax - Order Logbook',
             data: '',
             filter_data: '',
             user: req.user,

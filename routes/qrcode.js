@@ -486,7 +486,7 @@ router.get(
           }
           //console.log(qrcodes);
           res.render('dashboard_qrcode_static', {
-            page_title: 'FoodPrint - QR Code Dashboard',
+            page_title: 'Agoratrax - QR Code Dashboard',
             data: rows,
             user: req.user,
             qrcodes: qrcodes,
@@ -498,7 +498,7 @@ router.get(
           console.log('All dashboard_qrcode_static err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_static', {
-            page_title: 'FoodPrint - QR Code Dashboard',
+            page_title: 'Agoratrax - QR Code Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -555,7 +555,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('dashboard_qrcode_static', {
-        page_title: 'FoodPrint - QR Code Configuration Dashboard',
+        page_title: 'Agoratrax - QR Code Configuration Dashboard',
         data: '',
         roles: ROLES,
         user: req.user,
@@ -637,7 +637,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('dashboard_qrcode_static', {
-          page_title: 'FoodPrint - QR Code Configuration Dashboard',
+          page_title: 'Agoratrax - QR Code Configuration Dashboard',
           data: '',
           success: false,
           user: req.user,
@@ -687,7 +687,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('dashboard_qrcode_static', {
-        page_title: 'FoodPrint - QR Code Configuration Dashboard',
+        page_title: 'Agoratrax - QR Code Configuration Dashboard',
         data: '',
         page_name: 'dashboard_qrcode_static',
       }); //should add error array here
@@ -732,7 +732,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('dashboard_qrcode_static', {
-          page_title: 'FoodPrint - QR Code Configuration Dashboard',
+          page_title: 'Agoratrax - QR Code Configuration Dashboard',
           data: '',
           success: false,
           errors: e.array(),
@@ -799,7 +799,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(qrcoderows => {
             res.render('dashboard_qrcode_attributes', {
-              page_title: 'FoodPrint - QR Code Dashboard',
+              page_title: 'Agoratrax - QR Code Dashboard',
               data: rows,
               qrdata: req.params.qrid,
               user: req.user,
@@ -813,7 +813,7 @@ router.get(
           console.log('All dashboard_qrcode_attributes err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_attributes', {
-            page_title: 'FoodPrint - QR Code Dashboard',
+            page_title: 'Agoratrax - QR Code Dashboard',
             data: '',
             qrdata: '',
             qrcodedata: '',
@@ -855,7 +855,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('dashboard_qrcode_attributes', {
-        page_title: 'FoodPrint - QR Code Configuration Dashboard',
+        page_title: 'Agoratrax - QR Code Configuration Dashboard',
         data: '',
         page_name: 'dashboard_qrcode_attributes',
       }); //should add error array here
@@ -887,7 +887,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('dashboard_qrcode_attributes', {
-          page_title: 'FoodPrint - QR Code Attribute Dashboard',
+          page_title: 'Agoratrax - QR Code Attribute Dashboard',
           data: '',
           success: false,
           errors: e.array(),
@@ -918,7 +918,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('dashboard_qrcode_attributes', {
-        page_title: 'FoodPrint - QR Code Configuration Dashboard',
+        page_title: 'Agoratrax - QR Code Configuration Dashboard',
         data: '',
         page_name: 'dashboard_qrcode_attributes',
       }); //should add error array here
@@ -953,7 +953,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('dashboard_qrcode_attributes', {
-          page_title: 'FoodPrint - QR Code Attribute Dashboard',
+          page_title: 'Agoratrax - QR Code Attribute Dashboard',
           data: '',
           success: false,
           errors: e.array(),
@@ -1059,7 +1059,7 @@ router.get(
             }
 
             res.render('qrcode_product', {
-              page_title: 'FoodPrint - QR Code Product',
+              page_title: 'Agoratrax - QR Code Product',
               product_data: rows,
               qrdata: req.params.qrid,
               user: req.user,
@@ -1073,7 +1073,7 @@ router.get(
           console.log('All qrcode_product err:' + err);
           req.flash('error', err);
           res.render('qrcode_product', {
-            page_title: 'FoodPrint - QR Code Product',
+            page_title: 'Agoratrax - QR Code Product',
             product_data: '',
             qrdata: '',
             qrcode_data: '',
@@ -1106,7 +1106,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -1117,7 +1117,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1133,7 +1133,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -1144,7 +1144,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1177,7 +1177,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: rows,
             user: req.user,
             filter_data: req.params.qrtype,
@@ -1188,7 +1188,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1205,7 +1205,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: rows,
             user: req.user,
             filter_data: req.params.qrtype,
@@ -1216,7 +1216,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'Agoratrax - QR Code Analytics Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1324,7 +1324,7 @@ router.get(
             console.log(harvest_data);
 
             res.render('dashboard_qrcode_supplier', {
-              page_title: 'FoodPrint - QR Code Dashboard',
+              page_title: 'Agoratrax - QR Code Dashboard',
               data: rows,
               user: req.user,
               qrcodes: qrcodes,
@@ -1338,7 +1338,7 @@ router.get(
           console.log('All dashboard_qrcode_supplier err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_supplier', {
-            page_title: 'FoodPrint - QR Code Dashboard',
+            page_title: 'Agoratrax - QR Code Dashboard',
             data: '',
             filter_data: '',
             harvest_data: '',

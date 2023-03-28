@@ -37,7 +37,7 @@ router.get(
       })
         .then(rows => {
           res.render('buyerlogbook', {
-            page_title: 'FoodPrint - Buyer Logbook',
+            page_title: 'Agoratrax - Buyer Logbook',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -48,7 +48,7 @@ router.get(
           console.log('All buyerlogbook err:' + err);
           req.flash('error', err);
           res.render('buyerlogbook', {
-            page_title: 'FoodPrint - Buyer Logbook',
+            page_title: 'Agoratrax - Buyer Logbook',
             data: '',
             filter_data: '',
             user: req.user,
@@ -87,7 +87,7 @@ router.get(
       })
         .then(rows => {
           res.render('buyerlogbook', {
-            page_title: 'FoodPrint - Buyer Logbook Page',
+            page_title: 'Agoratrax - Buyer Logbook Page',
             data: rows,
             user: req.user,
             filter_data: req.params.range,
@@ -98,7 +98,7 @@ router.get(
           console.log('All produce err:' + err);
           req.flash('error', err);
           res.render('buyerlogbook', {
-            page_title: 'FoodPrint - Buyer Logbook Page',
+            page_title: 'Agoratrax - Buyer Logbook Page',
             data: '',
             user: req.user,
             filter_data: '',
@@ -135,7 +135,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('buyerlogbook', {
-        page_title: 'FoodPrint - Buyer Logbook Page',
+        page_title: 'Agoratrax - Buyer Logbook Page',
         data: '',
         page_name: 'buyerlogbook',
       }); //should add error array here
@@ -172,7 +172,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('buyerlogbook', {
-          page_title: 'FoodPrint - Buyer logbook Page',
+          page_title: 'Agoratrax - Buyer logbook Page',
           data: '',
           success: false,
           errors: e.array(),

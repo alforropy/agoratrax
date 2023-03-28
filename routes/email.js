@@ -36,7 +36,7 @@ router.get(
       })
         .then(rows => {
           res.render('email', {
-            page_title: 'FoodPrint - Email Dashboard',
+            page_title: 'Agoratrax - Email Dashboard',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -47,7 +47,7 @@ router.get(
           console.log('All email err:' + err);
           req.flash('error', err);
           res.render('email', {
-            page_title: 'FoodPrint - Email Dashboard',
+            page_title: 'Agoratrax - Email Dashboard',
             data: '',
             filter_data: '',
             user: req.user,

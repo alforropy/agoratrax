@@ -35,7 +35,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Admin Dashboard',
+              title: 'Agoratrax - Admin Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -111,7 +111,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Admin Dashboard',
+              title: 'Agoratrax - Admin Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,
@@ -164,7 +164,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Farmer Dashboard',
+              title: 'Agoratrax - Farmer Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -252,7 +252,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Farmer Dashboard',
+              title: 'Agoratrax - Farmer Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,
