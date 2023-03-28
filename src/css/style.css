@@ -491,15 +491,15 @@ a.hover-reverse:active {
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
 .btn.btn-primary:focus {
-  background: #bad845;
+  background: #00bd8bc9;
   color: #ffffff;
-  border: 2px solid #bad845;
+  border: 2px solid #00bd8bc9;
 }
 
 .btn.btn-primary:focus,
 .btn.btn-primary:active {
   outline: none;
-  border: 2px solid #bad845;
+  border: 2px solid #00bd8bc9;
 }
 
 .btn.btn-ghost {
@@ -1991,7 +1991,7 @@ a.hover-reverse:active {
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  background: #ffffff url(../img/FoodPrintLogo.gif) center no-repeat;
+  background: #ffffff url(../img/loading.gif) center no-repeat;
 }
 
 .gototop {
