@@ -37,7 +37,7 @@ const swaggerDefinition = {
       url: 'https://github.com/FoodPrintLabs/foodprint/blob/master/LICENSE',
     },
     contact: {
-      name: 'Foodprint Labs',
+      name: 'Agoratrax Labs',
       url: 'https://github.com/FoodPrintLabs',
     },
   },
