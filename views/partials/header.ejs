@@ -13,7 +13,7 @@
             <ul class="probootstrap-main-nav">
                 <li <% if (page_name==='home' ) { %>class="active"<% } %> ><a href="/">Home</a></li>
 
-                <% if (['Farmer','Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
+                <% if (['Farmer','Admin', 'Superuser'].indexOf(user?.role) >= 0 ){ %>
                     <li class="nav-item dropdown  <% if (page_name==='harvestlogbook' ) { %>active<% } %> ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Track & Trace
