@@ -126,7 +126,7 @@ body {
 }
 
 
-/*Order Dashboard 2.0*/
+/*Panel de Pedidos 2.0*/
 
 .order-card-title {
     font-size: x-small;
@@ -472,7 +472,7 @@ body {
 /* Home Dashboard View Changes End */
 
 
-/* Harvest Logbook View Changes Start */
+/* Registro de Cosecha View Changes Start */
 
 @media only screen and (max-width: 800px) and (min-width: 550px) {
     .container.harvestlogbook .buttons {
@@ -508,10 +508,10 @@ body {
 }
 
 
-/* Harvest Logbook View Changes End */
+/* Registro de Cosecha View Changes End */
 
 
-/* Storage/Handover Logbook View Changes Start */
+/* Storage/Registro de Entrega View Changes Start */
 
 @media only screen and (max-width: 800px) and (min-width: 550px) {
     .container.storagelogbook .buttons {
@@ -547,7 +547,7 @@ body {
 }
 
 
-/* Storage/Handover Logbook View Changes End */
+/* Storage/Registro de Entrega View Changes End */
 
 
 /* Trace Produce View Changes Start */
@@ -1023,7 +1023,7 @@ body {
 /* Seller Logbook View Changes End */
 
 
-/* Order Dashboard View Changes End */
+/* Panel de Pedidos View Changes End */
 
 .container.order-dashboard h3 {
     font-weight: bold;
@@ -1222,7 +1222,7 @@ body {
 /* Produce price page end */
 
 
-/* Produce List page Start */
+/* Lista de Productos page Start */
 
 #updateProduceModal .modal-content .modal-header .close,
 #addNewProduceModal .modal-content .modal-header .close {
@@ -1271,7 +1271,7 @@ body {
 }
 
 
-/* Produce List page End */
+/* Lista de Productos page End */
 
 
 /* Harvest Entry Modal Style Start */

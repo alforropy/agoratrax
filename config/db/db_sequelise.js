@@ -9,7 +9,7 @@ let sequelize;
 //   sequelize = new Sequelize(config.database, config.username, config.password, config);
 // }
 
-sequelize = new Sequelize('agoratrax', 'agoratrax', 'password', {
+sequelize = new Sequelize('agoratrax', 'root', 'password', {
   dialect: 'mysql',
   dialectOptions: {
     // Your mysql2 options here

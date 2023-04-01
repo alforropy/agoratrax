@@ -326,9 +326,24 @@ mysql://agora:admin@localhost:3306/agora
 
 
 mysql -u root -p
-CREATE DATABASE agoratrax
-CREATE USER 'agoratrax'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE agoratrax;
+CREATE USER 'agoratrax'@'localhost' IDENTIFIED BY 'Agora@2023';
 GRANT ALL PRIVILEGES ON *.* TO 'agoratrax'@'localhost' WITH GRANT OPTION;
 
+## Install
+
+```
+sudo apt-get install mysql-server
+```
+
+https://techvblogs.com/blog/how-to-install-mysql-on-ubuntu-22-04
 
 
+```
+mysql -u root -p
+CREATE DATABASE agoratrax;
+CREATE USER 'agoratrax2'@'localhost' IDENTIFIED BY 'passowrd';
+GRANT ALL PRIVILEGES ON *.* TO 'agoratrax2'@'localhost' WITH GRANT OPTION;
+```
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04

@@ -256,7 +256,7 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
     })
       .then(_ => {
         console.log(
-          'Harvest logbook entry with logid ' +
+          'Registro de Cosecha entry with logid ' +
             logId +
             ' updated with blockchain data for ' +
             'Algorand transaction ' +
@@ -267,7 +267,7 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
       .catch(err => {
         //throw err;
         console.log(
-          'Error - Update Harvest logbook entry logid ' +
+          'Error - Update Registro de Cosecha entry logid ' +
             logId +
             ' with blockchain data failed ' +
             'for Algorand transaction ' +
@@ -280,7 +280,7 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
   } catch (e) {
     //this will eventually be handled by your error handling middleware
     console.log(
-      'Harvest logbook entry with logid ' +
+      'Registro de Cosecha entry with logid ' +
         logId +
         ' not updated with blockchain data for Algorand ' +
         'transaction ' +

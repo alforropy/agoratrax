@@ -16,7 +16,7 @@ const user = require('../models/user');
 
 var models = initModels(sequelise);
 
-//Initial Render of Admin Dashboard
+//Initial Render of Panel de Administracion
 router.get(
   '/admin',
   require('connect-ensure-login').ensureLoggedIn({ redirectTo: '/app/auth/login' }),
@@ -35,7 +35,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Admin Dashboard',
+              title: 'FoodPrint - Panel de Administracion',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -64,7 +64,7 @@ router.get(
   }
 );
 
-//Render of Admin Dashboard with filtering
+//Render of Panel de Administracion with filtering
 router.get(
   '/admin/filter/:range',
   require('connect-ensure-login').ensureLoggedIn({ redirectTo: '/app/auth/login' }),
@@ -111,7 +111,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Admin Dashboard',
+              title: 'FoodPrint - Panel de Administracion',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,
@@ -140,7 +140,7 @@ router.get(
   }
 );
 
-//Initial Render of Farmer Dashboard
+//Initial Render of Panel del Agricultor
 router.get(
   '/farmer',
   require('connect-ensure-login').ensureLoggedIn({ redirectTo: '/app/auth/login' }),
@@ -164,7 +164,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Farmer Dashboard',
+              title: 'FoodPrint - Panel del Agricultor',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -193,7 +193,7 @@ router.get(
   }
 );
 
-//Render of Farmer Dashboard with FIltering
+//Render of Panel del Agricultor with FIltering
 
 router.get(
   '/farmer/filter/:range',
@@ -252,7 +252,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Farmer Dashboard',
+              title: 'FoodPrint - Panel del Agricultor',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,

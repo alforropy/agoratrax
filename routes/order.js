@@ -85,7 +85,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'FoodPrint - Panel de Pedidos',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -93,7 +93,7 @@ router.get(
               filter_data: '',
               filter_type: '',
               user: req.user,
-              page_name: 'Order Dashboard',
+              page_name: 'Panel de Pedidos',
             });
           });
         })
@@ -200,7 +200,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'FoodPrint - Panel de Pedidos',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -208,7 +208,7 @@ router.get(
               filter_data: req.params.range,
               filter_type: 'produce',
               user: req.user,
-              page_name: 'Order Dashboard',
+              page_name: 'Panel de Pedidos',
             });
           });
         })
@@ -296,7 +296,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'FoodPrint - Panel de Pedidos',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -304,7 +304,7 @@ router.get(
               filter_data: req.params.range,
               filter_type: 'province',
               user: req.user,
-              page_name: 'Order Dashboard',
+              page_name: 'Panel de Pedidos',
             });
           });
         })
@@ -424,7 +424,7 @@ router.get(
               finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
             }
             res.render('order_dashboard', {
-              title: 'FoodPrint - Order Dashboard',
+              title: 'FoodPrint - Panel de Pedidos',
               bid_rows: bid_rows,
               offer_rows: offer_rows,
               //return list of produce
@@ -432,7 +432,7 @@ router.get(
               filter_data: req.params.range,
               filter_type: 'timeframe',
               user: req.user,
-              page_name: 'Order Dashboard',
+              page_name: 'Panel de Pedidos',
             });
           });
         })
@@ -514,7 +514,7 @@ router.get(
                 finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
               }
               res.render('order_dashboard', {
-                title: 'FoodPrint - Order Dashboard',
+                title: 'FoodPrint - Panel de Pedidos',
                 bid_rows: bid_rows,
                 offer_rows: offer_rows,
                 //return list of produce
@@ -522,7 +522,7 @@ router.get(
                 filter_data: req.params.range,
                 filter_type: 'status',
                 user: req.user,
-                page_name: 'Order Dashboard',
+                page_name: 'Panel de Pedidos',
               });
             });
           })
@@ -590,7 +590,7 @@ router.get(
                 finalProduceArray = returnRelevantProduce(produce_rows, bid_rows, offer_rows);
               }
               res.render('order_dashboard', {
-                title: 'FoodPrint - Order Dashboard',
+                title: 'FoodPrint - Panel de Pedidos',
                 bid_rows: bid_rows,
                 offer_rows: offer_rows,
                 //return list of produce
@@ -598,7 +598,7 @@ router.get(
                 filter_data: req.params.range,
                 filter_type: 'status',
                 user: req.user,
-                page_name: 'Order Dashboard',
+                page_name: 'Panel de Pedidos',
               });
             });
           })
@@ -642,7 +642,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('order_dashboard', {
-        page_title: 'FoodPrint - Order Dashboard',
+        page_title: 'FoodPrint - Panel de Pedidos',
         data: '',
         page_name: 'order_dashboard',
       }); //should add error array here
@@ -730,7 +730,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('order_dashboard', {
-          page_title: 'FoodPrint - Order Dashboard',
+          page_title: 'FoodPrint - Panel de Pedidos',
           data: '',
           filter_data: '',
           filter_type: '',
@@ -760,7 +760,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('order_dashboard', {
-        page_title: 'FoodPrint - Order Dashboard',
+        page_title: 'FoodPrint - Panel de Pedidos',
         data: '',
         page_name: 'order_dashboard',
       }); //should add error array here
@@ -851,7 +851,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('order_dashboard', {
-          page_title: 'FoodPrint - Order Dashboard',
+          page_title: 'FoodPrint - Panel de Pedidos',
           data: '',
           filter_data: '',
           filter_type: '',

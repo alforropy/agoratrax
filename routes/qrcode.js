@@ -1105,7 +1105,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -1116,7 +1116,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1132,7 +1132,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -1143,7 +1143,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1176,7 +1176,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: rows,
             user: req.user,
             filter_data: req.params.qrtype,
@@ -1187,7 +1187,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
@@ -1204,7 +1204,7 @@ router.get(
       })
         .then(rows => {
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: rows,
             user: req.user,
             filter_data: req.params.qrtype,
@@ -1215,7 +1215,7 @@ router.get(
           console.log('All dashboard_qrcode_scans err:' + err);
           req.flash('error', err);
           res.render('dashboard_qrcode_scans', {
-            page_title: 'FoodPrint - QR Code Analytics Dashboard',
+            page_title: 'FoodPrint - Análisis de códigos QR Dashboard',
             data: '',
             filter_data: '',
             user: req.user,
