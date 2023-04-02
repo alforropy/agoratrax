@@ -63,9 +63,9 @@
                                         <%= data[i].order_province%>
                                     </td>
                                     <td style="width: 5%;">
-                                        <% if(user.role === "Buyer") {%>
+                                        <% if(user?.role === "Buyer") {%>
                                             <%= data[i].offer_user %>
-                                                <%} else if (user.role === "Seller" ) { %>
+                                                <%} else if (user?.role === "Seller" ) { %>
                                                     <%= data[i].bid_user%>
                                                         <% }%>
                                     </td>

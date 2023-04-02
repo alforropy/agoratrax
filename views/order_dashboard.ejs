@@ -227,7 +227,7 @@
                                 <h4>BUY OFFERS</h4>
                                 <div class="bids-list">
                                     <!--Each card-->
-                                    <% for(var k = 0; k< bid_rows.length; k++){ 
+                                    <% for(var k = 0; k< bid_rows.length; k++){
             if(bid_rows[k].bid_produceName == produce_rows[i]) {
           %>
 
@@ -258,7 +258,7 @@
                                 <h4>SELL OFFERS</h4>
                                 <div class="offers-list">
                                     <!--Each card-->
-                                    <% for(var k = 0; k< offer_rows.length; k++){ 
+                                    <% for(var k = 0; k< offer_rows.length; k++){
           if(offer_rows[k].offer_produceName == produce_rows[i]) {
         %>
                                         <div class="card col-1 col-lg-1 col-xl-1" style="width: 12rem;background-color: white;border-radius: 5px;margin: 10px;padding: 5px; box-shadow: 2px 2px 4px 5px #ccc;">
@@ -356,7 +356,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    <% if (user.role == "Seller" ) { %>
+                    <% if (user?.role == "Seller" ) { %>
                         <button type="submit" class="btn btn-primary">Accept</button></a>
                         <% } else { %>
                             <button type="submit" class="btn btn-secondary" disabled>Accept</button>
@@ -414,7 +414,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    <% if (user.role == "Buyer" ) { %>
+                    <% if (user?.role == "Buyer" ) { %>
                         <button type="submit" class="btn btn-primary">Accept</button></a>
                         <% } else { %>
                             <button type="submit" class="btn btn-secondary" disabled>Accept</button>

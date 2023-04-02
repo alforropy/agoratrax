@@ -23,7 +23,7 @@
         <div class="buttons">
             <a class="btn btn-primary btn-sm" onclick="ShowModal(this, 'add', 'Add Harvest Entry','addCSS')">Agregar Nueva Entrada de Cosecha</a>
             <a class="btn btn-primary btn-sm" href="/app/harvest/pdf" target="_blank">Ver Mi Registro de Cosecha (PDF)</a>
-            <% if (user.role == "Admin" || user.role == "Superuser") { %>
+            <% if (user?.role == "Admin" || user?.role == "Superuser") { %>
                 <a class="btn btn-primary btn-sm" href="/app/harvest/pdf/all" target="_blank">Ver Todos los Registros de Cosecha (PDF)</a>
                 <% } %>
 

@@ -13,7 +13,7 @@
             <ul class="probootstrap-main-nav">
                 <li <% if (page_name==='home' ) { %>class="active"<% } %> ><a href="/">Inicio</a></li>
 
-                <% if (['Farmer','Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
+                <% if (['Farmer','Admin', 'Superuser'].indexOf(user?.role) >= 0 ){ %>
                     <li class="nav-item dropdown  <% if (page_name==='harvestlogbook' ) { %>active<% } %> ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Seguimiento y Rastreo
@@ -98,6 +98,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/app/email">Registros de Correo Electrónico</a>
 
+                <% if (['Market','Admin', 'Superuser'].indexOf(user?.role) >= 0 ){ %>
                 </div>
             </li>
 
@@ -126,11 +127,11 @@
                             Wholesale Marketplace
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <% if (['Admin', 'Superuser','Buyer'].indexOf(user.role) >= 0 ){ %>
+                           <% if (['Admin', 'Superuser','Buyer'].indexOf(user?.role) >= 0 ){ %>
                                 <a class="dropdown-item" href="/app/buyer">Registro de Compradores</a>
                                 <div class="dropdown-divider"></div>
                             <% } %>
-                            <% if (['Admin', 'Superuser','Seller'].indexOf(user.role) >= 0 ){ %>
+                             <% if (['Admin', 'Superuser','Seller'].indexOf(user?.role) >= 0 ){ %>
                                 <a class="dropdown-item" href="/app/seller">Registro de Vendedores</a>
                                 <div class="dropdown-divider"></div>
                             <% } %>
@@ -149,11 +150,11 @@
                         Reporting & Dashboards
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <% if (['Admin', 'Superuser','Buyer'].indexOf(user.role) >= 0 ){ %>
+                        <% if (['Admin', 'Superuser','Buyer'].indexOf(user?.role) >= 0 ){ %>
                             <a class="dropdown-item" href="/app/buyer">QR Code Analytics</a>
                         <% } %>
 
-                        <% if (['Admin', 'Superuser','Seller'].indexOf(user.role) >= 0 ){ %>
+                        <% if (['Admin', 'Superuser','Seller'].indexOf(user?.role) >= 0 ){ %>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/app/seller">Registro de Vendedores</a>
                         <% } %>
@@ -164,20 +165,20 @@
                         <a class="dropdown-item" href="/app/order">Order Dashboard</a>
 
 
-                        <% if (['Admin', 'Superuser','Farmer'].indexOf(user.role) >= 0 ){ %>
+                        <% if (['Admin', 'Superuser','Farmer'].indexOf(user?.role) >= 0 ){ %>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/app/dashboards/admin">Admin Dashboard</a>
                         <% } %>
 
 
-                        <% if (['Admin', 'Superuser','Farmer'].indexOf(user.role) >= 0 ){ %>
+                        <% if (['Admin', 'Superuser','Farmer'].indexOf(user?.role) >= 0 ){ %>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/app/dashboards/farmer">Panel del Agricultor</a>
                         <% } %>
                     </div>
                 </li>
 
-                <% if (['Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
+                <% if (['Admin', 'Superuser'].indexOf(user?.role) >= 0 ){ %>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Configuracion
