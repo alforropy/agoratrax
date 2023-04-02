@@ -15,7 +15,7 @@
 
    <!-- START TABLE-->
    <div class="container" style="width: 100%;">
-    <h3>GLOBAL CONFIGURATION</h3>
+    <h3>CONFIGURACIÓN GLOBAL</h3>
     <div>
         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalAdd">Add New Configuration</button>
     </div>
@@ -27,11 +27,11 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Config ID</th>
-            <th scope="col">Config Name</th>
-            <th scope="col">Config Description</th>
-            <th scope="col">Config Value</th>
-            <th width="200px">Action</th>
+            <th scope="col">ID de configuración</th>
+            <th scope="col">Nombre de Configuración</th>
+            <th scope="col">Descripción de Configuración</th>
+            <th scope="col">Valor de Configuración</th>
+            <th width="200px">Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -47,16 +47,16 @@
                 <td>
                     <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-configid="<%= data[i].configid%>"
                        data-configname="<%= data[i].configname%>" data-configdescription="<%=data[i].configdescription%>"
-                        data-configvalue="<%= data[i].configvalue%>">Edit</a>
+                        data-configvalue="<%= data[i].configvalue%>">Editar</a>
                     <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-configid2="<%= data[i].configid%>"
-                       data-configname2="<%= data[i].configname%>">Delete</a>
+                       data-configname2="<%= data[i].configname%>">Borrar</a>
                 </td>
               </tr>
               <% }
 
            }else{ %>
                <tr>
-                  <td colspan="5">No Configuration</td>
+                  <td colspan="5">Sin configuración</td>
                </tr>
             <% } %>
 
@@ -71,30 +71,30 @@
          <div class="modal-dialog" role="document">
            <div class="modal-content">
              <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Add New Configuration</h5>
+               <h5 class="modal-title" id="exampleModalLabel">Agregar Nueva Configuración</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                </button>
              </div>
              <div class="modal-body">
                <div class="form-group">
-                   <label for="config_name">Config Name</label>
+                   <label for="config_name">Nombre de Configuración</label>
                    <input type="text" name="config_name" class="form-control" placeholder="Config Name" required>
                </div>
 
                <div class="form-group">
-                   <label for="config_description">Config Description</label>
+                   <label for="config_description">Descripción de Configuración</label>
                    <input type="text" name="config_description" class="form-control" placeholder="Config Description" required>
                </div>
 
                <div class="form-group">
-                   <label for="config_value">Config Value</label>
+                   <label for="config_value">Valor de Configuración</label>
                    <input type="text" name="config_value" class="form-control" placeholder="Config Value" required>
                </div>
              </div>
              <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               <button type="submit" class="btn btn-primary">Save</button>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+               <button type="submit" class="btn btn-primary">Guardar</button>
              </div>
            </div>
          </div>
@@ -108,31 +108,31 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Edit Configuration</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Editar Configuración</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <div class="form-group">
-                  <label for="config_name">Config Name</label>
+                  <label for="config_name">Nombre de Configuración</label>
                   <input type="text" name="config_name" class="form-control config_name" placeholder="Config Name" required>
               </div>
 
               <div class="form-group">
-                  <label for="config_description">Config Description</label>
+                  <label for="config_description">Descripción de Configuración</label>
                   <input type="text" name="config_description" class="form-control config_description" placeholder="Config Description" required>
               </div>
 
               <div class="form-group">
-                  <label for="config_value">Config Value</label>
+                  <label for="config_value">Valor de Configuración</label>
                   <input type="text" name="config_value" class="form-control config_value" placeholder="Config Value" required>
               </div>
             </div>
             <div class="modal-footer">
               <input type="hidden" name="config_id" class="config_id">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Update</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Actualizar</button>
             </div>
           </div>
         </div>
@@ -146,20 +146,20 @@
  	        <div class="modal-dialog">
  	           <div class="modal-content">
  	               <div class="modal-header">
-					  <h5 class="modal-title" id="myModalLabel">Delete Configuration</h5>
-                       <strong>Are you sure to delete this data?</strong>
+					  <h5 class="modal-title" id="myModalLabel">Eliminar Configuración</h5>
+                       <strong>¿Estás seguro de eliminar estos datos?</strong>
  	                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
  	               </div>
  	               <div class="modal-body">
                        <div class="form-group">
-                           <label for="config_name2">Config Name</label>
+                           <label for="config_name2">Nombre de Configuración</label>
                            <input type="text" name="config_name2" id="config_name2" class="form-control config_name2" readonly>
                        </div>
  	               </div>
  	               <div class="modal-footer">
 						<input type="hidden" name="config_id2" class="form-control config_id2" required>
- 	                   	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
- 	                  	<button type="submit" class="btn btn-danger">Delete</button>
+ 	                   	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+ 	                  	<button type="submit" class="btn btn-danger">Eliminar</button>
  	               </div>
  	      			</div>
  	        </div>

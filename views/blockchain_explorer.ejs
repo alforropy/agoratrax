@@ -22,41 +22,41 @@
             <div class="col-md-6 col-md-offset-3">
                 <!-- col-md-offset-3 class that will offset by 3 columns, given that Bootstrap has a 12-column grid this will put a col-md-6 element right in the center. -->
                 <div class="title col-12 title-global-container">
-                    <h3 class="title-global">BLOCKCHAIN EXPLORER</h3>
+                    <h3 class="title-global">Explorador de Blockchain</h3>
                 </div>
                     <%- include('partials/notificationbar'); %>
                     <div>
-                        <a class="btn btn-primary btn-sm enableBlockchainButton">Enable Blockchain Wallet</a>
-                        <p>Connected Account: <span class="showAccount"></span></p>
+                        <a class="btn btn-primary btn-sm enableBlockchainButton">Habilitar Billetera Blockchain</a>
+                        <p>Conectar Cuenta: <span class="showAccount"></span></p>
                     </div>
 
-                    <h5>Harvest Search Form</h5>
+                    <h5>Formulario de Búsqueda de Cosecha</h5>
                     <form id="search_harvest_form">
                         <div class="form-group">
                             <input type="text" id="search_harvest_id" class="form-control" placeholder="Enter Harvest ID" required>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary" id="verifyHarvestEntryBtn">Verify Harvest ID</button>
+                            <button class="btn btn-primary" id="verifyHarvestEntryBtn">Verificar Identificación de Cosecha</button>
                         </div>
                     </form>
 
-                    <h5>Harvest Search Result</h5>
+                    <h5>Resultado de Búsqueda de Cosecha</h5>
                     <div id="search_result_harvest" style="display: none">
                     </div>
 
                     <hr>
 
-                    <h5>Storage Search Form</h5>
+                    <h5>Formulario de Búsqueda de Almacenamiento</h5>
                     <form id="search_storage_form">
                         <div class="form-group">
                             <input type="text" id="search_storage_id" class="form-control" placeholder="Enter Storage ID" required>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary" id="verifyStorageEntryBtn">Verify Storage ID</button>
+                            <button class="btn btn-primary" id="verifyStorageEntryBtn">Verificar ID de Almacenamiento</button>
                         </div>
                     </form>
 
-                    <h5>Storage Search Result</h5>
+                    <h5>Resultado de Búsqueda de Almacenamiento</h5>
                     <div id="search_result_storage" style="display: none">
                     </div>
 
@@ -71,7 +71,7 @@
 
         <!-- Contract deployment details -->
         <div class="col-md-6 col-md-offset-3">
-            <h5>Blockchain Configuration</h5>
+            <h5>Configuración de Blockchain</h5>
             <div id="currentEtheremAccountDiv"></div>
             <!--
           <p>Contract deployed  on Ethereum Rinkeby testnet</p>
@@ -79,6 +79,7 @@
           <p>Contract deployed at Testnet address <a href="https://rinkeby.etherscan.io/address/0xfC4d26073650887069dFa7Da686A491535ab8Fd4" target="_blank" >0xfC4d26073650887069dFa7Da686A491535ab8Fd4</a></p>
           <p>Contract creator <a href="https://rinkeby.etherscan.io/address/0x4B67D20a4F27d248aF0462C23F8C193f073517FB" target="_blank" >0x4B67D20a4F27d248aF0462C23F8C193f073517FB</a></p>
         -->
+            <!-- TODO: configuration de blockchain -->
             <p>Contract deployed on Matic mumbai testnet</p>
             <p>Contract deployed in Testnet transaction <a href="https://mumbai.polygonscan.com/tx/0xf814b93a97d73c9dc0c023a4e25d992e58440564593359bf9c1f6ed2514174f6" target="_blank">0xf814b93a97d73c9dc0c023a4e25d992e58440564593359bf9c1f6ed2514174f6</a></p>
             <p>Contract deployed at Testnet address <a href="https://mumbai.polygonscan.com/address/0x650168110ada1f089d443904c6759b7349576a0d" target="_blank">0x650168110ada1f089d443904c6759b7349576a0d</a></p>

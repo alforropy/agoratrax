@@ -18,15 +18,14 @@
     <!-- START TABLE-->
     <div class="container storagelogbook" style="width: 100%;">
         <div class="title col-12 title-global-container">
-            <h3 class="title-global">Storage/Registro de Entrega</h3>
+            <h3 class="title-global">Almacenamiento/Registro de Entrega</h3>
         </div>
         <div class="buttons">
-            <a class="btn btn-primary btn-sm" onclick="ShowStorageModal(this, 'add', 'Add Storage Entry','addCSS')">Add New Storage Entry</a>
-            <a class="btn btn-primary btn-sm" href="/app/storage/pdf" target="_blank">View My Storage Record (PDF)</a>
+            <a class="btn btn-primary btn-sm" onclick="ShowStorageModal(this, 'add', 'Add Storage Entry','addCSS')">Agregar Nueva Entrada de Almacenamiento</a>
+            <a class="btn btn-primary btn-sm" href="/app/storage/pdf" target="_blank">Ver mi registro de Almacenamiento (PDF)</a>
             <% if (user.role == "Admin" || user.role == "Superuser") { %>
-                <a class="btn btn-primary btn-sm" href="/app/storage/pdf/all" target="_blank">View All Storage Records (PDF)</a>
+                <a class="btn btn-primary btn-sm" href="/app/storage/pdf/all" target="_blank">Ver todos los registros de almacenamiento (PDF)</a>
                 <% } %>
-
                     <!--      <a class="btn btn-primary btn-sm enableBlockchainButton" >Enable Blockchain Wallet</a>-->
                     <!--      <p>Connected Account: <span class="showAccount"></span></p>-->
         </div>
@@ -39,11 +38,11 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Storage ID</th>
-                            <th scope="col">Storage Datetime</th>
-                            <th scope="col">Supplier Shortcode</th>
-                            <th scope="col">Produce</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">ID de Almacenamiento</th>
+                            <th scope="col">Hora y Fecha de Almacenamiento</th>
+                            <th scope="col">Shortcode del Proveedor</th>
+                            <th scope="col">Produccion</th>
+                            <th scope="col">Accion</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -103,7 +102,7 @@
                                         <% if(data[i].storage_bool_added_to_blockchain!=='false'){%>
                                             <a href="<%=data[i].blockchain_explorer_url%>" class="btn btn-xs btn-success" target="_blank" style="padding-right: 18px; width: 100%;
                       padding-left: 20px; background-color: rgb(16, 202, 16);">
-                      View on Blockchain</a>
+                      Ver en el Blockchain</a>
                                             <%}else{ %>
                                                 <a onclick="addToBlockchain(this)" class="btn btn-xs btn-success blockchain addStorageToBlockchainBtn" style="padding-right: 22px;
                       padding-left: 20px; width: 100%;" id="<%= (" storage_add_blockchain_ " + data[i].storage_logid) %>" data-harvest_logid="<%= data[i].harvest_logid%>" data-harvest_suppliershortcode="<%=data[i].harvest_supplierShortcode%>" data-supplierproduce="<%=data[i].supplierproduce%>"
@@ -112,7 +111,7 @@
                                                     data-storage_blockchainhashid="<%=data[i].storage_BlockchainHashID%>" data-storage_blockchainhashdata="<%=data[i].storage_BlockchainHashData%>" data-storage_description="<%=data[i].storage_Description%>"
                                                     data-storage_bool_added_to_blockchain="<%=data[i].storage_bool_added_to_blockchain%>" data-storage_added_to_blockchain_date="<%=data[i].storage_added_to_blockchain_date%>" data-storage_added_to_blockchain_by="<%=data[i].storage_added_to_blockchain_by%>"
                                                     data-storage_blockchain_uuid="<%=data[i].storage_blockchain_uuid%>" data-storage_user="<%=data[i].storage_user%>" data-logdatetime="<%=data[i].logdatetime%>" data-lastmodifieddatetime="<%=data[i].lastmodifieddatetime%>">
-                      Add to Blockchain</a>
+                      Agregar al Blockchain</a>
                                                 <% } %>
                                                     <!--<button type="button" class="btn btn-primary disabled">Disabled Primary</button> -->
                                     </div>
@@ -136,7 +135,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="storageModalLabel">View Storage</h5>
+                        <h5 class="modal-title" id="storageModalLabel">Ver Almacenamiento</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -145,23 +144,23 @@
                         <div id="modalBodyContainer" class="classIDThatContainstheContentsforModal">
                             <div class="modal-column">
                                 <div class="form-group" id="viewmodal_harvest_logidSelectDiv">
-                                    <label for="viewmodal_harvest_logidSelect">Select Harvest ID</label>
+                                    <label for="viewmodal_harvest_logidSelect">Seleccionar ID de Cosecha</label>
                                     <select class="form-control" name="viewmodal_harvest_logidSelect" id="viewmodal_harvest_logidSelect" placeholder="Select Harvest ID" style="width:100%;">
-                    <option value="" selected disabled>Select Harvest ID...</option>
+                    <option value="" selected disabled>Seleccionar ID de Cosecha...</option>
                     <% if(typeof harvest_data != "undefined" && harvest_data.length){
                       for(var i = 0; i< harvest_data.length; i++) {%>
                         <option value="<%=harvest_data[i].harvest_logid%>"><%= harvest_data[i].harvest_TimeStamp +  "/"  + harvest_data[i].supplierproduce + "/"  + harvest_data[i].harvest_quantity + "("+ harvest_data[i].harvest_unitOfMeasure + ")"%></option>
                           <% }
                         }else{ %>
-                          <option>No data</option>
+                          <option>Sin Datos</option>
                          <% } %>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_suppliershortcode">Supplier Shortcode</label>
+                                    <label for="viewmodal_harvest_suppliershortcode">Shortcode del Proveedor</label>
                                     <select class="form-control" name="viewmodal_harvest_suppliershortcode" id="viewmodal_harvest_suppliershortcode">
-                    <option value="" selected disabled >Choose Supplier...</option>
+                    <option value="" selected disabled >Seleccionar Proveedor...</option>
                     <option>BGSM</option>
                     <option>EKLN</option>
                     <option>OZCF</option>
@@ -173,9 +172,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_supplierproduce">Supplier Produce</label>
+                                    <label for="viewmodal_supplierproduce">Producto del Proveedor</label>
                                     <select class="form-control" name="viewmodal_supplierproduce" id="viewmodal_supplierproduce">
-                    <option value="" selected disabled >Choose Supplier Produce...</option>
+                    <option value="" selected disabled >Seleccionar Producto del Proveedor...</option>
                     <option>BGSM_Bergamot</option>
                     <option>BGSM_Lemon</option>
                     <option>BGSM_Mor</option>
@@ -214,51 +213,51 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_Shortcode">Market Shortcode</label>
+                                    <label for="viewmodal_market_Shortcode">Shortcode del Mercado</label>
                                     <select class="form-control" name="viewmodal_market_Shortcode" id="viewmodal_market_Shortcode">
-                    <option value="" selected disabled >Choose Market Shortcode...</option>
+                    <option value="" selected disabled >Seleccionar Shortcode del Mercado...</option>
                     <option>OZCFM</option>
                     <option>OBM</option>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_Name">Market Name</label>
+                                    <label for="viewmodal_market_Name">Nombre del Mercado</label>
                                     <select class="form-control" name="viewmodal_market_Name" id="viewmodal_market_Name">
-                    <option value="" selected disabled >Choose Market Name...</option>
+                    <option value="" selected disabled >Seleccionar Nombre del Mercado...</option>
                     <option value="2">Oranjezicht City Farm Market</option>
                     <option value="1">Neighbourgoods Market - The Old Biscuit Mill</option>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_Address">Market Address</label>
+                                    <label for="viewmodal_market_Address">Direccion del Mercado</label>
                                     <select class="form-control" name="viewmodal_market_Address" id="viewmodal_market_Address">
-                    <option value="" selected disabled >Choose Market Address...</option>
+                    <option value="" selected disabled >Seleccionar Direccion del Mercado...</option>
                     <option value="1">OBM - 375 Albert Rd, Woodstock, Cape Town, 7915</option>
                     <option value="2">OZCFM - Granger Bay Blvd, Victoria & Alfred Waterfront, Cape Town, 8051</option>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_quantity">Produce Quantity</label>
+                                    <label for="viewmodal_market_quantity">Cantidad de Producto</label>
                                     <input type="number" name="viewmodal_market_quantity" class="form-control" id="viewmodal_market_quantity" placeholder="Quantity of produce received by Market">
                                 </div>
                             </div>
                             <div class="modal-column">
                                 <div class="form-group">
-                                    <label for="viewmodal_market_unitOfMeasure">Unit of Measure</label>
+                                    <label for="viewmodal_market_unitOfMeasure">Unidad de Medida</label>
                                     <select class="form-control" id="viewmodal_market_unitOfMeasure" name="viewmodal_market_unitOfMeasure">
-                    <option value="" selected disabled >Choose Unit of Measure...</option>
-                    <option>bunch</option>
-                    <option>kilogram</option>
-                    <option>none</option>
-                    <option>box</option>
+                    <option value="" selected disabled >Seleccionar Unidad de Medida...</option>
+                    <option>ramo</option>
+                    <option>kilogramo</option>
+                    <option>ninguno</option>
+                    <option>caja</option>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_storageTimeStamp">Storage/Handover Time</label>
+                                    <label for="viewmodal_market_storageTimeStamp">Tiempo de almacenamiento/entrega</label>
                                     <div class="input-group form_datetime" id="viewmodal_market_storageTimeStamp_datetimepicker" data-target-input="viewmodal_market_storageTimeStamp">
                                         <input type="datetime-local" class="form-control" id="viewmodal_market_storageTimeStamp" name="viewmodal_market_storageTimeStamp" placeholder="Actual time of Storage/Handover with farmer (Storage Timestamp)" data-target="#viewmodal_market_storageTimeStamp"
                                         />
@@ -266,39 +265,41 @@
                                 </div>
 
                                 <div class="form-group" id="viewmodal_market_storageCaptureTimeDiv">
-                                    <label for="viewmodal_market_storageCaptureTime">Storage/Handover Data Capture Time</label>
+                                    <label for="viewmodal_market_storageCaptureTime">Tiempo de captura de datos de almacenamiento/traspaso</label>
                                     <div class="input-group form_datetime" id="viewmodal_market_storageCaptureTime_datetimepicker" data-target-input="viewmodal_market_storageCaptureTime">
                                         <input type="datetime-local" class="form-control" id="viewmodal_market_storageCaptureTime" name="viewmodal_market_storageCaptureTime" placeholder="Storage/Handover Data Capture Time" data-target="#viewmodal_market_storageCaptureTime" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_market_URL">Market URL</label>
+                                    <label for="viewmodal_market_URL">URL del Mercado</label>
                                     <input type="text" name="viewmodal_market_URL" class="form-control" id="viewmodal_market_URL" placeholder="Market URL">
                                 </div>
 
                                 <div class="form-group" , id="viewmodal_storage_BlockchainHashIDDiv">
-                                    <label for="viewmodal_storage_BlockchainHashID">Storage Blockchain Hash ID</label>
+                                    <label for="viewmodal_storage_BlockchainHashID">ID de hash de cadena de bloques de almacenamiento</label>
                                     <input type="text" name="viewmodal_storage_BlockchainHashID" class="form-control" id="viewmodal_storage_BlockchainHashID" placeholder="Storage Blockchain Hash ID">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_BlockchainHashDataDiv">
-                                    <label for="viewmodal_storage_BlockchainHashData">Blockchain Hash Data</label>
+                                    <label for="viewmodal_storage_BlockchainHashData">Datos hash de cadena de bloques</label>
                                     <input type="text" name="viewmodal_storage_BlockchainHashData" class="form-control" id="viewmodal_storage_BlockchainHashData" placeholder="Blockchain Hash Data">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_storage_Description">Description of Produce Storage/Handover</label>
+                                    <label for="viewmodal_storage_Description">
+                                        Descripción del almacenamiento/entrega de productos</label>
                                     <input type="text" name="viewmodal_storage_Description" class="form-control" id="viewmodal_storage_Description" placeholder="Storage Description">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_bool_added_to_blockchainDiv">
-                                    <label for="viewmodal_storage_bool_added_to_blockchain">Storage Added to Blockchain - Yes / No</label>
+                                    <label for="viewmodal_storage_bool_added_to_blockchain">
+                                        Almacenamiento agregado a Blockchain - Sí / No</label>
                                     <input type="text" name="viewmodal_storage_bool_added_to_blockchain" class="form-control" id="viewmodal_storage_bool_added_to_blockchain" placeholder="Storage Added to Blockchain - Yes / No">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_added_to_blockchain_dateDiv">
-                                    <label for="viewmodal_storage_added_to_blockchain_date">Storage Added to Blockchain Datetime</label>
+                                    <label for="viewmodal_storage_added_to_blockchain_date">Fecha y Hora</label>
                                     <div class="input-group form_datetime" id="viewmodal_storage_added_to_blockchain_date_datetimepicker" data-target-input="viewmodal_storage_added_to_blockchain_date">
                                         <input type="datetime-local" class="form-control" id="viewmodal_storage_added_to_blockchain_date" name="viewmodal_storage_added_to_blockchain_date" placeholder="Storage Added to Blockchain Datetime" data-target="#viewmodal_storage_added_to_blockchain_date"
                                         />
@@ -306,29 +307,29 @@
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_added_to_blockchain_byDiv">
-                                    <label for="viewmodal_storage_added_to_blockchain_by">Storage Added to Blockchain By User</label>
+                                    <label for="viewmodal_storage_added_to_blockchain_by">Almacenamiento agregado a Blockchain por usuario</label>
                                     <input type="text" name="viewmodal_storage_added_to_blockchain_by" class="form-control" id="viewmodal_storage_added_to_blockchain_by" placeholder="Storage Added to Blockchain By User">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_blockchain_uuidDiv">
-                                    <label for="viewmodal_storage_blockchain_uuid">Storage Blockchain ID</label>
+                                    <label for="viewmodal_storage_blockchain_uuid">Blockchain ID del Almacenamiento</label>
                                     <input type="text" name="viewmodal_storage_blockchain_uuid" class="form-control" id="viewmodal_storage_blockchain_uuid" placeholder="Storage Blockchain ID">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_userDiv">
-                                    <label for="viewmodal_storage_user">Storage Logged By User</label>
+                                    <label for="viewmodal_storage_user">Almacenamiento registrado por el usuario</label>
                                     <input type="text" name="viewmodal_storage_user" class="form-control" id="viewmodal_storage_user" placeholder="Storage Logged By User">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_logdatetimeDiv">
-                                    <label for="viewmodal_logdatetime">Log Datetime</label>
+                                    <label for="viewmodal_logdatetime">Hora y Fecha del Registro</label>
                                     <div class="input-group form_datetime" id="viewmodal_logdatetime_datetimepicker" data-target-input="viewmodal_logdatetime">
                                         <input type="datetime-local" class="form-control" id="viewmodal_logdatetime" name="viewmodal_logdatetime" placeholder="Log Datetime" data-target="#viewmodal_logdatetime" />
                                     </div>
                                 </div>
 
                                 <div class="form-group" id="viewmodal_lastmodifieddatetimeDiv">
-                                    <label for="viewmodal_lastmodifieddatetime">Last Modified Datetime</label>
+                                    <label for="viewmodal_lastmodifieddatetime">Fecha y Hora de la ultima modificacion</label>
                                     <div class="input-group form_datetime" id="viewmodal_lastmodifieddatetime_datetimepicker" data-target-input="viewmodal_lastmodifieddatetime">
                                         <input type="datetime-local" class="form-control" id="viewmodal_lastmodifieddatetime" name="viewmodal_lastmodifieddatetime" placeholder="Last Modified Datetime" data-target="#viewmodal_lastmodifieddatetime" />
                                     </div>
@@ -336,28 +337,28 @@
 
 
                                 <div class="form-group" id="viewmodal_harvest_logidDiv">
-                                    <label for="viewmodal_harvest_logid">Harvest ID</label>
+                                    <label for="viewmodal_harvest_logid">ID de Cosecha</label>
                                     <input type="text" name="viewmodal_harvest_logid" class="form-control" id="viewmodal_harvest_logid" placeholder="Harvest ID">
                                 </div>
 
                                 <div class="form-group" id="viewmodal_storage_logidDiv">
-                                    <label for="viewmodal_storage_logid">Storage/Handover ID</label>
+                                    <label for="viewmodal_storage_logid">Identificación de almacenamiento/traspaso</label>
                                     <input type="text" name="viewmodal_storage_logid" class="form-control" id="viewmodal_storage_logid" placeholder="Storage/Handover ID">
                                 </div>
                                 <div class="form-group" id="qrcode_image_section">
-                                    <label for="qrcode_img">QR Image</label>
+                                    <label for="qrcode_img">QR Imagen</label>
                                     <img name="qrcode_img" src="" class="qrcode_img" id="qrcode_img" alt="QR Code Image">
                                 </div>
 
                                 <div class="form-check" id="storageCheckDiv">
                                     <input type="checkbox" class="form-check-input" id="storageCheck" required>
-                                    <label class="form-check-label" for="storageCheck">I confirm the above storage entry is correct</label>
+                                    <label class="form-check-label" for="storageCheck">Confirmo que la entrada de almacenamiento anterior es correcta</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-check" id="storageDeleteDiv">
                             <input type="checkbox" class="form-check-input" id="storageDelete" required>
-                            <label class="form-check-label" for="storageDelete">I confirm I wish to delete this storage entry</label>
+                            <label class="form-check-label" for="storageDelete">Confirmo que deseo eliminar esta entrada de almacenamiento</label>
                         </div>
                     </div>
                     <div class="modal-footer" id="modalFooter">

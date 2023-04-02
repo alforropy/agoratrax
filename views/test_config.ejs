@@ -9,9 +9,9 @@
 </head>
 <body>
   <div>
-    <a href="/" class="btn btn-primary ml-3">Home</a>
-    <a href="#" class="btn btn-secondary ml-3">New Customer</a>
-    <a href="#" class="btn btn-info ml-3">Customer List</a>
+    <a href="/" class="btn btn-primary ml-3">Inicio</a>
+    <a href="#" class="btn btn-secondary ml-3">Nuevo Cliente</a>
+    <a href="#" class="btn btn-info ml-3">Lista de Clientes</a>
 </div>
 <!--   <% if (messages.error) { %>
   <p style="color:red"><%- messages.error %></p>
@@ -26,8 +26,8 @@
   <tr>
     <th scope="col">#</th>
     <th scope="col">ID</th>
-    <th scope="col">Farmer Name</th>
-    <th width="200px">Produce Name</th>
+    <th scope="col">Nombre del Granjero</th>
+    <th width="200px">Nombre del Producto</th>
 
   </tr>
 </thead>
@@ -51,33 +51,33 @@
 
    }else{ %>
        <tr>
-          <td colspan="3">No data</td>
+          <td colspan="3">Sin Datos</td>
        </tr>
     <% } %>
 </tbody>
 </table>
 
 <div class="row">
-  <p><a class="btn btn-success" id="test_whatsapp_pdf" href="/app/produce/pricepage/pdf/whatsapp" target="_blank">Test WhatsApp Produce Price PDF</a></p>
+  <p><a class="btn btn-success" id="test_whatsapp_pdf" href="/app/produce/pricepage/pdf/whatsapp" target="_blank">Prueba de PDF de Precios por Whatsapp</a></p>
   <p><text id="test_whatsapp_pdf_result"></text></p>
   <div class="alert-danger" id = "test_whatsapp_pdf_error_group" style="display: none"></div>
   <ul id="test_whatsapp_pdf_errors"></ul>
 </div>
 <div class="row">
-  <p><a class="btn btn-success" id="test_email">Test Email</a></p>
+  <p><a class="btn btn-success" id="test_email">Prueba Email</a></p>
   <p><text id="test_email_result"></text></p>
   <div class="alert-danger" id = "test_email_error_group" style="display: none"></div>
   <ul id="test_email_errors"></ul>
 </div>
 <div class="row">
-  <p><a class="btn btn-success" id="test_qrcode">Test QR Code</a></p>
+  <p><a class="btn btn-success" id="test_qrcode">Test Codigo QR</a></p>
   <p><text id="test_qrcode_result"></text></p>
   <p><div id="test_qrcode_image"></div></p>
   <div class="alert-danger" id = "test_qrcode_error_group" style="display: none"></div>
   <ul id="test_qrcode_errors"></ul>
 </div>
 <div class="row">
-  <p><a class="btn btn-success" id="test_rest_producescan">Test REST API (app/api/v1/scan/WMNP_Fennel)</a></p>
+  <p><a class="btn btn-success" id="test_rest_producescan">Test API REST(app/api/v1/scan/WMNP_Fennel)</a></p>
   <p><text id="test_rest_producescan_result"></text></p>
   <p><div id="test_rest_producescan_image"></div></p>
   <div class="alert-danger" id = "test_rest_producescan_error_group" style="display: none"></div>
