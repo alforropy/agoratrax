@@ -16,7 +16,7 @@ function storagepdf(data) {
           data[i].market_Name +
           ';  Market Quantity: ' +
           data[i].market_quantity +
-          ';  Unit of Measure: ' +
+          ';  Unidad de Medida: ' +
           data[i].market_unitOfMeasure +
           ';  Storage Timestamp: ' +
           data[i].market_storageTimeStamp,

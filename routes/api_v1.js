@@ -377,7 +377,7 @@ router.post(
       .trim()
       .escape(),
     check('harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
-    check('harvest_description', 'Harvest Description value is not valid')
+    check('harvest_description', 'El valor de Descripción de Cosecha no es Válido')
       .not()
       .isEmpty()
       .trim()
@@ -559,7 +559,7 @@ router.post(
       .escape(),
     check('harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     check('harvest_capturetime', 'Harvest Capture Time value is not valid').not().isEmpty(),
-    check('harvest_description', 'Harvest Description value is not valid')
+    check('harvest_description', 'El valor de Descripción de Cosecha no es Válido')
       .not()
       .isEmpty()
       .trim()

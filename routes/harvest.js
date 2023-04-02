@@ -153,7 +153,7 @@ router.post(
     //check('viewmodal_harvest_photohash', 'Harvest PhotoHash value is not valid').not().isEmpty().trim().escape(),
     check('viewmodal_harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     //check('viewmodal_harvest_capturetime', 'Harvest Capture Time value is not valid').not().isEmpty(),
-    check('viewmodal_harvest_description', 'Harvest Description value is not valid')
+    check('viewmodal_harvest_description', 'El valor de Descripción de Cosecha no es Válido')
       .not()
       .isEmpty()
       .trim()
@@ -173,7 +173,6 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    // check('viewmodal_harvest_description_json', 'Harvest Description value is not valid').not().isEmpty().trim().escape(),
     //check('viewmodal_harvest_blockchainhashid', 'Blockchain Hash ID value is not valid').not().isEmpty().trim().escape(),
     //check('viewmodal_harvest_blockchainhashdata', 'Blockchain Hash Data value is not valid').not().isEmpty().trim().escape(),
     check('viewmodal_supplierproduce', 'Supplier Produce value is not valid')
@@ -577,7 +576,7 @@ router.post(
     check('viewmodal_harvest_capturetime', 'Harvest Capture Time value is not valid')
       .not()
       .isEmpty(),
-    check('viewmodal_harvest_description', 'Harvest Description value is not valid')
+    check('viewmodal_harvest_description', 'El valor de Descripción de Cosecha no es Válido')
       .not()
       .isEmpty()
       .trim()
@@ -597,7 +596,6 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    // check('viewmodal_harvest_description_json', 'Harvest Description value is not valid').not().isEmpty().trim().escape(),
     check('viewmodal_harvest_blockchainhashid', 'Blockchain Hash ID value is not valid')
       .not()
       .isEmpty()

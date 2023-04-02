@@ -19,7 +19,7 @@ const acceptOrderEmail = function (
                <table>
               <tr><td><b>Nombre del Producto</b></td><td >${produceName}</td></tr>
               <tr><td><b>Province </b></td><td >${province}</td></tr>
-              <tr><td><b>Quantity </b></td><td >${quantity}</td></tr>
+              <tr><td><b>Cantidad </b></td><td >${quantity}</td></tr>
               <tr><td><b>Price </b></td><td >${price}</td></tr>
               <tr><td><b>Time Accepted </b></td><td >${timeStamp}</td></tr>
               <tr><td><b>From </b></td><td >${order_user}</td></tr>
@@ -37,7 +37,7 @@ const acceptOrderEmail = function (
        <table>
       <tr><td><b>Nombre del Producto </b></td><td >${produceName}</td></tr>
       <tr><td><b>Province </b></td><td >${province}</td></tr>
-      <tr><td><b>Quantity </b></td><td >${quantity}</td></tr>
+      <tr><td><b>Cantidad </b></td><td >${quantity}</td></tr>
       <tr><td><b>Price </b></td><td >${price}</td></tr>
       <tr><td><b>Time Accepted </b></td><td >${timeStamp}</td></tr>
       <tr><td><b>From </b></td><td >${order_user}</td></tr>
@@ -54,7 +54,7 @@ const acceptOrderEmail = function (
               <table>
               <tr><td><b>Nombre del Producto </b></td><td >${produceName}</td></tr>
               <tr><td ><b>Province </b></td><td >${province}</td></tr>
-              <tr><td ><b>Quantity </b></td><td >${quantity}</td></tr>
+              <tr><td ><b>Cantidad </b></td><td >${quantity}</td></tr>
               <tr><td ><b>Price </b></td><td >${price}</td></tr>
               <tr><td ><b>Time Accepted </b></td><td >${timeStamp}</td></tr>
               <tr><td ><b>From </b></td><td >${current}</td></tr>

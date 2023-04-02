@@ -8,9 +8,9 @@ function harvestpdf(data) {
           data[i].harvest_logid +
           ';  Produce: ' +
           data[i].harvest_produceName +
-          ';  Quantity: ' +
+          ';  Cantidad: ' +
           data[i].harvest_quantity +
-          ';  Unit of Measure: ' +
+          ';  Unidad de Medida: ' +
           data[i].harvest_unitOfMeasure +
           ';  Marca de Tiempo de Cosecha: ' +
           data[i].harvest_TimeStamp +
