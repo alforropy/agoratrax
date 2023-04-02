@@ -100,7 +100,7 @@ router.get(
               }
               console.log('Successful QRCode Generation');
               res.render('storagelogbook', {
-                page_title: 'FoodPrint - Storage Logbook',
+                page_title: 'Agoratrax - Storage Logbook',
                 data: rows,
                 harvest_data: harvest_rows,
                 user: req.user,
@@ -383,7 +383,7 @@ router.post(
           models.FoodprintStorage.findAll(sql_search_condition)
             .then(_ => {
               res.render('storagelogbook', {
-                page_title: 'FoodPrint - Storage Logbook',
+                page_title: 'Agoratrax - Storage Logbook',
                 success: false,
                 errors: e.array(),
                 data: rows,
@@ -643,7 +643,7 @@ router.post(
           models.FoodprintStorage.findAll(sql_search_condition)
             .then(_ => {
               res.render('storagelogbook', {
-                page_title: 'FoodPrint - Storage Logbook',
+                page_title: 'Agoratrax - Storage Logbook',
                 success: false,
                 errors: e.array(),
                 data: rows,

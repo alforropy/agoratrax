@@ -35,7 +35,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Panel de Administracion',
+              title: 'Agoratrax - Admin Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -111,7 +111,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_admin', {
-              title: 'FoodPrint - Panel de Administracion',
+              title: 'Agoratrax - Admin Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,
@@ -164,7 +164,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Panel del Agricultor',
+              title: 'Agoratrax - Farmer Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: null,
@@ -252,7 +252,7 @@ router.get(
             order: [['pk', 'DESC']],
           }).then(storage_rows => {
             res.render('dashboard_farmer', {
-              title: 'FoodPrint - Panel del Agricultor',
+              title: 'Agoratrax - Farmer Dashboard',
               harvest_data: harvest_rows,
               storage_data: storage_rows,
               filter_data: req.params.range,
@@ -275,6 +275,8 @@ router.get(
         message: 'You are not authorised to view this resource.',
         title: 'Error',
         user: req.user,
+        roles: ROLES,
+
         page_name: 'error',
       });
     }

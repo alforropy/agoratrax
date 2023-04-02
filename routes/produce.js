@@ -41,7 +41,7 @@ router.get(
       })
         .then(rows => {
           res.render('produce', {
-            page_title: 'FoodPrint - Produce Page',
+            page_title: 'Agoratrax - Produce Page',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -52,7 +52,7 @@ router.get(
           console.log('All produce err:' + err);
           req.flash('error', err);
           res.render('produce', {
-            page_title: 'FoodPrint - Produce Page',
+            page_title: 'Agoratrax - Produce Page',
             data: '',
             filter_data: '',
             user: req.user,
@@ -86,7 +86,7 @@ router.get(
       })
         .then(rows => {
           res.render('produce', {
-            page_title: 'FoodPrint - Produce Page',
+            page_title: 'Agoratrax - Produce Page',
             data: rows,
             user: req.user,
             filter_data: req.params.range,
@@ -97,7 +97,7 @@ router.get(
           console.log('All produce err:' + err);
           req.flash('error', err);
           res.render('produce', {
-            page_title: 'FoodPrint - Produce Page',
+            page_title: 'Agoratrax - Produce Page',
             data: '',
             user: req.user,
             page_name: 'produce',
@@ -130,7 +130,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('produce', {
-        page_title: 'FoodPrint - Produce Page',
+        page_title: 'Agoratrax - Produce Page',
         data: '',
         page_name: 'produce',
       }); //should add error array here
@@ -159,7 +159,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('produce', {
-          page_title: 'FoodPrint - Produce Page',
+          page_title: 'Agoratrax - Produce Page',
           data: '',
           success: false,
           errors: e.array(),
@@ -186,7 +186,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('produce', {
-        page_title: 'FoodPrint - Produce Page',
+        page_title: 'Agoratrax - Produce Page',
         data: '',
         page_name: 'produce',
       }); //should add error array here
@@ -219,7 +219,7 @@ router.post(
         next(e);
         //res.json({success: false, errors:errors.array()});
         res.render('produce', {
-          page_title: 'FoodPrint - Produce Page',
+          page_title: 'Agoratrax - Produce Page',
           data: '',
           success: false,
           errors: e.array(),
@@ -264,7 +264,7 @@ router.get(
       })
         .then(rows => {
           res.render('produce_price', {
-            page_title: 'FoodPrint - Produce Price Page',
+            page_title: 'Agoratrax - Produce Price Page',
             data: rows,
             user: req.user,
             filter_data: '',
@@ -275,7 +275,7 @@ router.get(
           console.log('All produce err:' + err);
           req.flash('error', err);
           res.render('produce_price', {
-            page_title: 'FoodPrint - Produce Price Page',
+            page_title: 'Agoratrax - Produce Price Page',
             data: '',
             user: req.user,
             filter_data: '',
@@ -308,7 +308,7 @@ router.get(
       })
         .then(rows => {
           res.render('produce_price', {
-            page_title: 'FoodPrint - Produce Price Page',
+            page_title: 'Agoratrax - Produce Price Page',
             data: rows,
             user: req.user,
             filter_data: req.params.range,
@@ -319,7 +319,7 @@ router.get(
           console.log('All produce err:' + err);
           req.flash('error', err);
           res.render('produce_price', {
-            page_title: 'FoodPrint - Produce Price Page',
+            page_title: 'Agoratrax - Produce Price Page',
             data: '',
             user: req.user,
             filter_data: '',
@@ -354,7 +354,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('pricepage', {
-        page_title: 'FoodPrint - Price Page',
+        page_title: 'Agoratrax - Price Page',
         data: '',
         page_name: 'pricepage',
       }); //should add error array here
@@ -388,7 +388,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('pricepage', {
-          page_title: 'FoodPrint - Price Page',
+          page_title: 'Agoratrax - Price Page',
           data: '',
           success: false,
           errors: e.array(),
@@ -416,7 +416,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('pricepage', {
-        page_title: 'FoodPrint - Price Page',
+        page_title: 'Agoratrax - Price Page',
         data: '',
         page_name: 'pricepage',
       }); //should add error array here
@@ -454,7 +454,7 @@ router.post(
         next(e);
         //res.json({success: false, errors:errors.array()});
         res.render('pricepage', {
-          page_title: 'FoodPrint - Price Page',
+          page_title: 'Agoratrax - Price Page',
           data: '',
           success: false,
           errors: e.array(),

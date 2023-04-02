@@ -29,7 +29,8 @@ router.get('/login', function (req, res) {
   if (req.user) {
     res.redirect('/');
   } else {
-    res.render('login', { title: 'FoodPrint - User Login', user: req.user, page_name: 'login' });
+    res.render('login', {
+      title: 'Agoratrax - User Login', user: req.user, page_name: 'login' });
   }
 });
 
@@ -69,14 +70,14 @@ router.get('/logout', function (req, res) {
 router.get('/register/:message?', function (req, res) {
   req.params.message
     ? res.render('message', {
-        title: 'FoodPrint - User Registration',
+        title: 'Agoratrax - User Registration',
         user: req.user,
         page_name: 'message',
         message:
           'Your registration has been submitted and is currently under review by the FoodPrint Team! You will be notified of status updates via the email you provided.',
       })
     : res.render('register', {
-        title: 'FoodPrint - User Registration',
+        title: 'Agoratrax - User Registration',
         user: req.user,
         page_name: 'register',
       });

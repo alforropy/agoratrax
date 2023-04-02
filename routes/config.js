@@ -21,7 +21,7 @@ router.get(
       })
         .then(rows => {
           res.render('config', {
-            page_title: 'FoodPrint - Global Configuration',
+            page_title: 'Agoratrax - Global Configuration',
             data: rows,
             user: req.user,
             page_name: 'config',
@@ -30,7 +30,7 @@ router.get(
         .catch(err => {
           req.flash('error', err);
           res.render('config', {
-            page_title: 'FoodPrint - Global Configuration',
+            page_title: 'Agoratrax - Global Configuration',
             data: '',
             user: req.user,
             page_name: 'config',
@@ -78,7 +78,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('config', {
-        page_title: 'FoodPrint - Global Configuration',
+        page_title: 'Agoratrax - Global Configuration',
         data: '',
         page_name: 'config',
       }); //should add error array here
@@ -112,7 +112,7 @@ router.post(
         next(e);
         //res.json({success: false, errors: e});
         res.render('config', {
-          page_title: 'FoodPrint - Global Configuration',
+          page_title: 'Agoratrax - Global Configuration',
           data: '',
           success: false,
           errors: e.array(),
@@ -144,7 +144,7 @@ router.post(
     if (!result.isEmpty()) {
       req.flash('error', errors);
       res.render('config', {
-        page_title: 'FoodPrint - Global Configuration',
+        page_title: 'Agoratrax - Global Configuration',
         data: '',
         page_name: 'config',
       }); //should add error array here
@@ -178,7 +178,7 @@ router.post(
         next(e);
         //res.json({success: false, errors:errors.array()});
         res.render('config', {
-          page_title: 'FoodPrint - Global Configuration',
+          page_title: 'Agoratrax - Global Configuration',
           data: '',
           success: false,
           errors: e.array(),
