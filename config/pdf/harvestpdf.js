@@ -12,7 +12,7 @@ function harvestpdf(data) {
           data[i].harvest_quantity +
           ';  Unit of Measure: ' +
           data[i].harvest_unitOfMeasure +
-          ';  Harvest Timestamp: ' +
+          ';  Marca de Tiempo de Cosecha: ' +
           data[i].harvest_TimeStamp +
           ';  Farmer Name: ' +
           data[i].harvest_farmerName,

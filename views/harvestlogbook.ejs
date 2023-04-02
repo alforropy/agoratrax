@@ -21,10 +21,10 @@
             <h3 class="title-global">Registro de Cosecha</h3>
         </div>
         <div class="buttons">
-            <a class="btn btn-primary btn-sm" onclick="ShowModal(this, 'add', 'Add Harvest Entry','addCSS')">Add New Harvest Entry</a>
-            <a class="btn btn-primary btn-sm" href="/app/harvest/pdf" target="_blank">View My Harvest Record (PDF)</a>
+            <a class="btn btn-primary btn-sm" onclick="ShowModal(this, 'add', 'Add Harvest Entry','addCSS')">Agregar Nueva Entrada de Cosecha</a>
+            <a class="btn btn-primary btn-sm" href="/app/harvest/pdf" target="_blank">Ver Mi Registro de Cosecha (PDF)</a>
             <% if (user.role == "Admin" || user.role == "Superuser") { %>
-                <a class="btn btn-primary btn-sm" href="/app/harvest/pdf/all" target="_blank">View All Harvest Records (PDF)</a>
+                <a class="btn btn-primary btn-sm" href="/app/harvest/pdf/all" target="_blank">Ver Todos los Registros de Cosecha (PDF)</a>
                 <% } %>
 
                     <!--      <a class="btn btn-primary btn-sm enableBlockchainButton" >Enable Blockchain Wallet</a>-->
@@ -39,11 +39,11 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Harvest ID</th>
-                            <th scope="col">Harvest Datetime</th>
-                            <th scope="col">Supplier</th>
-                            <th scope="col">Produce</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">ID de Cosecha</th>
+                            <th scope="col">Fecha y Hora de la Cosecha</th>
+                            <th scope="col">Proveedor</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Acción</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -136,7 +136,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content" id="modalContentDiv">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="harvestModalLabel">View Harvest</h5>
+                        <h5 class="modal-title" id="harvestModalLabel">Ver Cosecha</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -145,9 +145,9 @@
                         <div id="modalBodyContainer" class="classIDThatContainstheContentsforModal">
                             <div class="modal-column">
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_suppliershortcode">Supplier Shortcode</label>
+                                    <label for="viewmodal_harvest_suppliershortcode">Código Abreviado del Proveedor</label>
                                     <select class="form-control" name="viewmodal_harvest_suppliershortcode" id="viewmodal_harvest_suppliershortcode">
-                    <option value="" selected disabled >Choose Supplier...</option>
+                    <option value="" selected disabled >Elija Proveedor...</option>
                     <option>BGSM</option>
                     <option>EKLN</option>
                     <option>OZCF</option>
@@ -159,9 +159,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_suppliername">Farm Name</label>
+                                    <label for="viewmodal_harvest_suppliername">Nombre de la Granja</label>
                                     <select class="form-control" name="viewmodal_harvest_suppliername" id="viewmodal_harvest_suppliername">
-                    <option value="" selected disabled >Farm Name</option>
+                    <option value="" selected disabled >Nombre de la Granja</option>
                     <option>Bergsoom Farm</option>
                     <option>Eikelaan Farm</option>
                     <option>FoodPrint Test Farm</option>
@@ -174,14 +174,14 @@
 
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_producename">Produce Name</label>
+                                    <label for="viewmodal_harvest_producename">Nombre del Producto</label>
                                     <select class="form-control" id="viewmodal_harvest_producename" name="viewmodal_harvest_producename">
                     <option value="" selected disabled >Choose Produce...</option>
                   </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_supplierproduce">Supplier Produce Code</label>
+                                    <label for="viewmodal_supplierproduce">Código de Producción del Proveedor</label>
                                     <select class="form-control" name="viewmodal_supplierproduce" id="viewmodal_supplierproduce">
                     <!--Only sets to available values below on chosing produce above-->
                     <option value="" selected disabled >Supplier Produce</option>
@@ -224,13 +224,13 @@
 
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_supplieraddress">Farmer Address</label>
+                                    <label for="viewmodal_harvest_supplieraddress">Dirección del Agricultor</label>
                                     <input type="text" name="viewmodal_harvest_supplieraddress" class="form-control" id="viewmodal_harvest_supplieraddress" placeholder="Supplier Address">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_farmername">Farmer Name</label>
-                                    <input type="text" name="viewmodal_harvest_farmername" class="form-control" id="viewmodal_harvest_farmername" placeholder="Farmer Name">
+                                    <label for="viewmodal_harvest_farmername">Nombre del Agricultor</label>
+                                    <input type="text" name="viewmodal_harvest_farmername" class="form-control" id="viewmodal_harvest_farmername" placeholder="Nombre del Agricultor">
                                 </div>
 
                                 <div class="form-group" style="display: none;">
@@ -245,7 +245,7 @@
 
                                 <!--NB name="viewmodal_harvest_photohash_uploaded_file" and enctype="multipart/form-data" on the from required for multer library-->
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_photohash">Harvest Photo</label>
+                                    <label for="viewmodal_harvest_photohash">Foto de la Cosecha</label>
                                     <input type="file" name="viewmodal_harvest_photohash_uploaded_file" class="form-control" id="viewmodal_harvest_photohash" placeholder="Photo hash" accept=".jpg, .jpeg, .png">
                                     <div id="viewmodal_harvest_photoimageDiv">
                                         <img id="viewmodal_harvest_photoimage" width='100%' alt="Harvest Image" />
@@ -253,9 +253,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="viewmodal_harvest_timestamp">Harvest Timestamp</label>
+                                    <label for="viewmodal_harvest_timestamp">Marca de Tiempo de Cosecha</label>
                                     <div class="input-group form_datetime" id="viewmodal_harvest_timestamp_datetimepicker" data-target-input="viewmodal_harvest_timestamp">
-                                        <input type="datetime-local" class="form-control" id="viewmodal_harvest_timestamp" name="viewmodal_harvest_timestamp" placeholder="Actual time of Harvest in the field (Harvest Timestamp)" data-target="#viewmodal_harvest_timestamp" />
+                                        <input type="datetime-local" class="form-control" id="viewmodal_harvest_timestamp" name="viewmodal_harvest_timestamp" placeholder="Tiempo Real de Cosecha en el Campo" data-target="#viewmodal_harvest_timestamp" />
                                     </div>
                                 </div>
                             </div>

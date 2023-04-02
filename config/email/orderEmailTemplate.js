@@ -17,7 +17,7 @@ const acceptOrderEmail = function (
     return `<h3>Offer accepted!</h3>
               <p>Hello ${current}! You accepted an order of ${produceName}. Listed below is your order </p>
                <table>
-              <tr><td><b>Produce Name </b></td><td >${produceName}</td></tr>
+              <tr><td><b>Nombre del Producto</b></td><td >${produceName}</td></tr>
               <tr><td><b>Province </b></td><td >${province}</td></tr>
               <tr><td><b>Quantity </b></td><td >${quantity}</td></tr>
               <tr><td><b>Price </b></td><td >${price}</td></tr>
@@ -35,7 +35,7 @@ const acceptOrderEmail = function (
     return `<h3>Bid accepted!</h3>
       <p>Hello ${current}! You accepted an order of ${produceName}. Listed below is your order </p>
        <table>
-      <tr><td><b>Produce Name </b></td><td >${produceName}</td></tr>
+      <tr><td><b>Nombre del Producto </b></td><td >${produceName}</td></tr>
       <tr><td><b>Province </b></td><td >${province}</td></tr>
       <tr><td><b>Quantity </b></td><td >${quantity}</td></tr>
       <tr><td><b>Price </b></td><td >${price}</td></tr>
@@ -52,7 +52,7 @@ const acceptOrderEmail = function (
     return `<h3>Order Accepted!</h3>
               <p>Hello ${current}! Your ${type} of ${produceName} was accepted by ${order_user}. Listed below is your accepted order </p>
               <table>
-              <tr><td><b>Produce Name </b></td><td >${produceName}</td></tr>
+              <tr><td><b>Nombre del Producto </b></td><td >${produceName}</td></tr>
               <tr><td ><b>Province </b></td><td >${province}</td></tr>
               <tr><td ><b>Quantity </b></td><td >${quantity}</td></tr>
               <tr><td ><b>Price </b></td><td >${price}</td></tr>

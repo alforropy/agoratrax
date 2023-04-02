@@ -551,7 +551,7 @@ body {
 /* Storage/Registro de Entrega View Changes End */
 
 
-/* Trace Produce View Changes Start */
+/* Rastrear Productos View Changes Start */
 
 .container.traceproduce #search_result_title h5 {
     font-weight: 600 !important;
@@ -590,10 +590,10 @@ body {
 @media only screen and (max-width: 550px) {}
 
 
-/* Trace Produce View Changes End */
+/* Rastrear Productos View Changes End */
 
 
-/* Buyer Logbook View Changes Start */
+/* Registro de Compradores View Changes Start */
 
 .container.buyerlogbook .buttons-top {
     display: flex;
@@ -817,10 +817,10 @@ body {
 }
 
 
-/* Buyer Logbook View Changes End */
+/* Registro de Compradores View Changes End */
 
 
-/* Seller Logbook View Changes Start */
+/* Registro de Vendedores View Changes Start */
 
 .container.sellerlogbook .buttons-top {
     display: flex;
@@ -1021,7 +1021,7 @@ body {
 }
 
 
-/* Seller Logbook View Changes End */
+/* Registro de Vendedores View Changes End */
 
 
 /* Panel de Pedidos View Changes End */

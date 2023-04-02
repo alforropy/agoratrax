@@ -3,7 +3,6 @@
 <!-- add immediately after body tag-->
 <div class="container-fluid header-container">
     <a href="/" class="logo-wrapper">
-        <h2 class="probootstrap-logo">Agoratrax<span>.</span></h2>
         <img class="logo" src="/img/agoratrax.png" height="40px" align="left" vertical-align="middle" alt="logo">
     </a>
 
@@ -12,25 +11,25 @@
     <% if (['login', 'register'].indexOf(page_name) === -1 ) { %>
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li <% if (page_name==='home' ) { %>class="active"<% } %> ><a href="/">Home</a></li>
+                <li <% if (page_name==='home' ) { %>class="active"<% } %> ><a href="/">Inicio</a></li>
 
                 <% if (['Farmer','Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
                     <li class="nav-item dropdown  <% if (page_name==='harvestlogbook' ) { %>active<% } %> ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Track & Trace
+                            Seguimiento y Rastreo
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/app/harvest">Harvest Logbook</a>
+                            <a class="dropdown-item" href="/app/harvest">Registro de Cosecha</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/storage">Storage/Handover Logbook</a>
+                            <a class="dropdown-item" href="/app/storage">Storage/Registro de Registro de Entrega</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/trace_produce">Trace Produce</a>
+                            <a class="dropdown-item" href="/app/trace_produce">Rastrear Productos</a>
                         </div>
                     </li>
                 <% } %>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Track & Trace
+                    Seguimiento y Rastreo
             </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/app/harvest">Registro de Cosecha</a>
@@ -120,7 +119,7 @@
                 <li><a href="https://twitter.com/foodprintlabs"><i class="icon-twitter"></i></a></li>
                 <li><a href="https://www.facebook.com/foodprintlabs"><i class="icon-facebook"></i></a></li>
                 <li><a href="https://www.linkedin.com/company/foodprintlabs"><i class="icon-linkedin"></i></a></li>
-=======
+=
                 <% if (['Market','Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,16 +127,16 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <% if (['Admin', 'Superuser','Buyer'].indexOf(user.role) >= 0 ){ %>
-                                <a class="dropdown-item" href="/app/buyer">Buyer Logbook</a>
+                                <a class="dropdown-item" href="/app/buyer">Registro de Compradores</a>
                                 <div class="dropdown-divider"></div>
                             <% } %>
                             <% if (['Admin', 'Superuser','Seller'].indexOf(user.role) >= 0 ){ %>
-                                <a class="dropdown-item" href="/app/seller">Seller Logbook</a>
+                                <a class="dropdown-item" href="/app/seller">Registro de Vendedores</a>
                                 <div class="dropdown-divider"></div>
                             <% } %>
                             <a class="dropdown-item" href="/app/order">Order Dashboard</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/order/myorders">My Orders</a>
+                            <a class="dropdown-item" href="/app/order/myorders">Mis Ordenes</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/app/produce">Produce List</a>
                             <div class="dropdown-divider"></div>
@@ -156,7 +155,7 @@
 
                         <% if (['Admin', 'Superuser','Seller'].indexOf(user.role) >= 0 ){ %>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/seller">Seller Logbook</a>
+                            <a class="dropdown-item" href="/app/seller">Registro de Vendedores</a>
                         <% } %>
 
 
@@ -173,7 +172,7 @@
 
                         <% if (['Admin', 'Superuser','Farmer'].indexOf(user.role) >= 0 ){ %>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/dashboards/farmer">Farmer Dashboard</a>
+                            <a class="dropdown-item" href="/app/dashboards/farmer">Panel del Agricultor</a>
                         <% } %>
                     </div>
                 </li>
@@ -181,23 +180,23 @@
                 <% if (['Admin', 'Superuser'].indexOf(user.role) >= 0 ){ %>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Configuration
+                            Configuracion
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/qrcode">QR Codes - Static</a>
+                            <a class="dropdown-item" href="/app/qrcode">QR Codes - Estaticos</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/qrcode/supplierproduce">QR Codes - Supplier Produce</a>
+                            <a class="dropdown-item" href="/app/qrcode/supplierproduce">QR Codes - Proveedor de Productos</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://www.foodprintapp.com/img/demo_qrcode.png" target="_blank">Demo QR Code</a>
+                            <a class="dropdown-item" href="https://www.foodprintapp.com/img/demo_qrcode.png" target="_blank">Demo Codigo QR</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/blockchain_explorer">Users</a>
+                            <a class="dropdown-item" href="/app/blockchain_explorer">Usuarios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/test_config">Testing UI</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/produce">Produce List</a>
+                            <a class="dropdown-item" href="/app/produce">Lista de Produccion</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/app/produce/pricepage">Produce Pricing</a>
+                            <a class="dropdown-item" href="/app/produce/pricepage">Precios de Productos</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/app/email">Email Logs</a>
 
@@ -215,11 +214,10 @@
                         <a class="login-header" href="/app/auth/login">Login</a>
                     <% } %>
                 </li>
->>>>>>> master
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-                <h5>Connect</h5>
+                <h5>Conectar</h5>
                 <ul class="social-buttons">
                     <li><a href="https://twitter.com/foodprintlabs"><i class="icon-twitter"></i></a></li>
                     <li><a href="https://www.facebook.com/foodprintlabs"><i class="icon-facebook"></i></a></li>

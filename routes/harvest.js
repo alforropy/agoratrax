@@ -90,7 +90,7 @@ router.get(
             }*/
           }
           res.render('harvestlogbook', {
-            page_title: 'Agoratrax - Harvest Logbook',
+            page_title: 'Agoratrax - Registro de Cosecha',
             data: rows,
             user: req.user,
             page_name: 'harvestlogbook',
@@ -100,7 +100,7 @@ router.get(
           console.log('All harvests err:' + err);
           req.flash('error', err);
           res.render('harvestlogbook', {
-            page_title: 'Agoratrax - Harvest Logbook',
+            page_title: 'Agoratrax - Registro de Cosecha',
             data: '',
             user: req.user,
             page_name: 'harvestlogbook',
@@ -130,7 +130,7 @@ router.post(
     //viewmodal_harvest_bool_added_to_blockchain ,
     //viewmodal_harvest_user, viewmodal_harvest_blockchain_uuid, viewmodal_harvest_added_to_blockchain_by
 
-    check('viewmodal_harvest_suppliershortcode', 'Harvest Supplier Shortcode is not valid')
+    check('viewmodal_harvest_suppliershortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -145,13 +145,13 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('viewmodal_harvest_producename', 'Harvest Produce Name value is not valid')
+    check('viewmodal_harvest_producename', 'El valor del nombre del producto de la cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
       .escape(),
     //check('viewmodal_harvest_photohash', 'Harvest PhotoHash value is not valid').not().isEmpty().trim().escape(),
-    check('viewmodal_harvest_timestamp', 'Harvest Timestamp value is not valid').not().isEmpty(),
+    check('viewmodal_harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     //check('viewmodal_harvest_capturetime', 'Harvest Capture Time value is not valid').not().isEmpty(),
     check('viewmodal_harvest_description', 'Harvest Description value is not valid')
       .not()
@@ -318,7 +318,7 @@ router.post(
           models.FoodprintHarvest.findAll(sql_search_condition)
             .then(rows => {
               res.render('harvestlogbook', {
-                page_title: 'Agoratrax - Harvest Logbook',
+                page_title: 'Agoratrax - Registro de Cosecha',
                 success: false,
                 errors: e.array(),
                 data: rows,
@@ -330,7 +330,7 @@ router.post(
               console.log('All harvests err:' + err);
               req.flash('error', err.message);
               res.render('harvestlogbook', {
-                page_title: 'Agoratrax - Harvest Logbook',
+                page_title: 'Agoratrax - Registro de Cosecha',
                 data: '',
                 user: req.user,
                 page_name: 'harvestlogbook',
@@ -552,7 +552,7 @@ router.post(
   '/update',
   upload.none(),
   [
-    check('viewmodal_harvest_suppliershortcode', 'Harvest Supplier Shortcode is not valid')
+    check('viewmodal_harvest_suppliershortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -567,13 +567,13 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('viewmodal_harvest_producename', 'Harvest Produce Name value is not valid')
+    check('viewmodal_harvest_producename', 'El valor del nombre del producto de la cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
       .escape(),
     // check('viewmodal_harvest_photohash', 'Harvest PhotoHash value is not valid').not().isEmpty().trim().escape(),
-    check('viewmodal_harvest_timestamp', 'Harvest Timestamp value is not valid').not().isEmpty(),
+    check('viewmodal_harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     check('viewmodal_harvest_capturetime', 'Harvest Capture Time value is not valid')
       .not()
       .isEmpty(),
@@ -738,7 +738,7 @@ router.post(
           models.FoodprintHarvest.findAll(sql_search_condition)
             .then(rows => {
               res.render('harvestlogbook', {
-                page_title: 'Agoratrax - Harvest Logbook',
+                page_title: 'Agoratrax - Registro de Cosecha',
                 success: false,
                 errors: e.array(),
                 data: rows,
@@ -749,7 +749,7 @@ router.post(
             .catch(err => {
               req.flash('error', err.message);
               res.render('harvestlogbook', {
-                page_title: 'Agoratrax - Harvest Logbook',
+                page_title: 'Agoratrax - Registro de Cosecha',
                 data: '',
                 user: req.user,
                 page_name: 'harvestlogbook',

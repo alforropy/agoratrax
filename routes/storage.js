@@ -137,7 +137,7 @@ router.post(
   '/save',
   [
     //System populated items commented out and excluded from validation
-    check('viewmodal_harvest_suppliershortcode', 'Harvest Supplier Shortcode is not valid')
+    check('viewmodal_harvest_suppliershortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -477,7 +477,7 @@ router.post(
   '/update',
   [
     //System populated items commented out and excluded from validation
-    check('viewmodal_harvest_suppliershortcode', 'Harvest Supplier Shortcode is not valid')
+    check('viewmodal_harvest_suppliershortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()

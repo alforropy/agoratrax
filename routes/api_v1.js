@@ -356,7 +356,7 @@ router.get('/harvest', function (req, res) {
 router.post(
   '/harvest/save',
   [
-    check('harvest_supplierShortcode', 'Harvest Supplier Shortcode is not valid')
+    check('harvest_supplierShortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -371,12 +371,12 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_produceName', 'Harvest Produce Name value is not valid')
+    check('harvest_produceName', 'El valor del nombre del producto de la cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_timestamp', 'Harvest Timestamp value is not valid').not().isEmpty(),
+    check('harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     check('harvest_description', 'Harvest Description value is not valid')
       .not()
       .isEmpty()
@@ -537,7 +537,7 @@ router.post(
 router.post(
   '/harvest/update',
   [
-    check('harvest_supplierShortcode', 'Harvest Supplier Shortcode is not valid')
+    check('harvest_supplierShortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -552,12 +552,12 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_produceName', 'Harvest Produce Name value is not valid')
+    check('harvest_produceName', 'El valor del nombre del producto de la cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_timestamp', 'Harvest Timestamp value is not valid').not().isEmpty(),
+    check('harvest_timestamp', 'El valor de la marca de tiempo de cosecha no es válido').not().isEmpty(),
     check('harvest_capturetime', 'Harvest Capture Time value is not valid').not().isEmpty(),
     check('harvest_description', 'Harvest Description value is not valid')
       .not()
@@ -1074,7 +1074,7 @@ router.get('/storage', function (req, res, next) {
 router.post(
   '/storage/save',
   [
-    check('harvest_supplierShortcode', 'Harvest Supplier Shortcode is not valid')
+    check('harvest_supplierShortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
@@ -1316,7 +1316,7 @@ router.post(
 router.post(
   '/storage/update',
   [
-    check('harvest_supplierShortcode', 'Harvest Supplier Shortcode is not valid')
+    check('harvest_supplierShortcode', 'Código Abreviado del Proveedor no valido')
       .not()
       .isEmpty()
       .trim()
