@@ -23,7 +23,7 @@
         <div class="buttons">
             <a class="btn btn-primary btn-sm" onclick="ShowStorageModal(this, 'add', 'Add Storage Entry','addCSS')">Add New Storage Entry</a>
             <a class="btn btn-primary btn-sm" href="/app/storage/pdf" target="_blank">View My Storage Record (PDF)</a>
-            <% if (user.role == "Admin" || user.role == "Superuser") { %>
+            <% if (user?.role == "Admin" || user?.role == "Superuser") { %>
                 <a class="btn btn-primary btn-sm" href="/app/storage/pdf/all" target="_blank">View All Storage Records (PDF)</a>
                 <% } %>
 

@@ -23,7 +23,7 @@
         <div class="buttons">
             <a class="btn btn-primary btn-sm" onclick="ShowModal(this, 'add', 'Add Harvest Entry','addCSS')">Add New Harvest Entry</a>
             <a class="btn btn-primary btn-sm" href="/app/harvest/pdf" target="_blank">View My Harvest Record (PDF)</a>
-            <% if (user.role == "Admin" || user.role == "Superuser") { %>
+            <% if (user?.role == "Admin" || user?.role == "Superuser") { %>
                 <a class="btn btn-primary btn-sm" href="/app/harvest/pdf/all" target="_blank">View All Harvest Records (PDF)</a>
                 <% } %>
 

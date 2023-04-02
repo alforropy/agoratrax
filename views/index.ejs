@@ -23,7 +23,7 @@
             <h3 class="title-global">Bienvenido a Agoratrax</h3>
         </div>
         <%- include('partials/notificationbar'); %>
-        <% if(user.role === roles.Farmer || admin_status){ %>
+        <% if(user?.role === roles.Farmer || admin_status){ %>
             <div class="row">
                 <h4 style="margin-left: 30px;">Track and Trace</h4>
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -50,7 +50,7 @@
             </div>
         <% } %>
 
-        <% if(user.role === roles.Market || admin_status){ %>
+        <% if(user?.role === roles.Market || admin_status){ %>
 
             <div class="row">
                 <h4 style="margin-left: 30px;">Wholesale Marketplace</h4>
