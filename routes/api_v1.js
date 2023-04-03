@@ -387,7 +387,7 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_quantity', 'Harvest Quantity value is not valid')
+    check('harvest_quantity', 'El valor de la cantidad de cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
@@ -569,7 +569,7 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('harvest_quantity', 'Harvest Quantity value is not valid')
+    check('harvest_quantity', 'El valor de la cantidad de cosecha no es válido')
       .not()
       .isEmpty()
       .trim()
@@ -1092,7 +1092,7 @@ router.post(
     check('market_Name', 'Market Name value is not valid').not().isEmpty().trim().escape(),
     check('market_Address', 'Market Address value is not valid').not().isEmpty(),
     check('harvest_logid', 'Harvest ID value is not valid').not().isEmpty().trim().escape(),
-    check('market_quantity', 'Storage Quantity value is not valid').not().isEmpty().trim().escape(),
+    check('market_quantity', 'El valor de la cantidad de almacenamiento no es válido').not().isEmpty().trim().escape(),
     check('market_unitOfMeasure', 'Storage Unit of Measure value  is not valid')
       .not()
       .isEmpty()
@@ -1100,7 +1100,7 @@ router.post(
       .escape(),
     check('market_storageTimeStamp', 'Storage Timestamp value is not valid').not().isEmpty(),
     check('market_URL', 'Market URL value is not valid').not().isEmpty().trim().escape(),
-    check('storage_Description', 'Storage Description value is not valid')
+    check('storage_Description', 'El valor de Descripción de almacenamiento no es válido')
       .not()
       .isEmpty()
       .trim()
@@ -1333,7 +1333,7 @@ router.post(
       .escape(),
     check('market_Name', 'Market Name value is not valid').not().isEmpty().trim().escape(),
     check('market_Address', 'Market Address value is not valid').not().isEmpty(),
-    check('market_quantity', 'Storage Quantity value is not valid').not().isEmpty().trim().escape(),
+    check('market_quantity', 'El valor de la cantidad de almacenamiento no es válido').not().isEmpty().trim().escape(),
     check('market_unitOfMeasure', 'Storage Unit of Measure value  is not valid')
       .not()
       .isEmpty()
@@ -1352,7 +1352,7 @@ router.post(
       .isEmpty()
       .trim()
       .escape(),
-    check('storage_Description', 'Storage Description value is not valid')
+    check('storage_Description', 'El valor de Descripción de almacenamiento no es válido')
       .not()
       .isEmpty()
       .trim()

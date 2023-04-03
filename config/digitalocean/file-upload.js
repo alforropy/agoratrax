@@ -36,7 +36,9 @@ const getUploadParams = function (bucket, contentType, buffer_data, acl, filenam
 const resolveFilenames = function (filename, extension) {
   // force filename to lower case so that string matching in chatbot is not an issue
   filename = filename.toLowerCase();
-  const fullUrl = 'https://' + BucketName + '.' + bucketEndpoint + '/' + filename + extension;
+  // const fullUrl = 'https://' + BucketName + '.' + bucketEndpoint + '/' + filename + extension;
+  const fullUrl = 'https://' + bucketEndpoint + '/' + BucketName + '/' + filename + extension;
+
   return (result = {
     filename: filename + extension,
     fileUrl: fullUrl,
@@ -53,7 +55,7 @@ const getCheckFileParams = (Bucket, key) => {
 
 const checkFileExists = async function () {
   // DO Check if file exists by returning metadata
- 
+
   const input = {
     Bucket: BucketName,
     Key: 'foodprint_produceprice_2022-07-26.pdf',

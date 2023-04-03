@@ -27,7 +27,7 @@ node_modules
 npm-debug.log
 
 # local env variables
-.env
+#.env
 
 # generated files
 bundle.js

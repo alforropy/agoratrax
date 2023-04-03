@@ -3,6 +3,7 @@ services:
   database:
     image: mysql:5.6
     restart: always
+    env_file: .env
     environment:
       MYSQL_DATABASE: 'foodprint'
       MYSQL_USER: 'admin'
@@ -13,6 +14,6 @@ services:
     expose:
       - '3306'
     volumes:
-      - foodprint-db:/var/lib/database
+      - agoratrax-db:/var/lib/database
 volumes:
-  foodprint-db:
+  agoratrax-db:

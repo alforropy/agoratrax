@@ -110,7 +110,7 @@
                             <th>Actividad</th>
                             <th>ID de Actividad</th>
                             <th>Proveedor</th>
-                            <th>Producir</th>
+                            <th>Producción</th>
                         </thead>
                         <tbody>
                             <%if(harvest_data.length){ %>
@@ -131,7 +131,7 @@
                         <% 
                  }else{ %>
                             <tr>
-                                <td colspan="5">No Data</td>
+                                <td colspan="5">Sin Datos</td>
                             </tr>
                             <% } %>
                     </table>
@@ -140,7 +140,7 @@
                             <th>Actividad</th>
                             <th>ID de Actividad</th>
                             <th>Mercado</th>
-                            <th>Producir</th>
+                            <th>Producción</th>
                         </thead>
                         <tbody>
                             <% if(storage_data.length){ %>
@@ -486,14 +486,14 @@
 
                         <div class="form-group">
                             <label for="viewmodal_harvest_quantity">Cantidad</label>
-                            <input type="number" name="viewmodal_harvest_quantity" class="form-control" id="viewmodal_harvest_quantity" placeholder="Cantidad of produce harvested">
+                            <input type="number" name="viewmodal_harvest_quantity" class="form-control" id="viewmodal_harvest_quantity" placeholder="Cantidad de producto cosechado">
                         </div>
 
                         <div class="form-group">
                             <label for="viewmodal_harvest_unitofmeasure">Unidad de Medida</label>
                             <select class="custom-select d-block w-100" id="viewmodal_harvest_unitofmeasure" name="viewmodal_harvest_unitofmeasure">
                     <option value="" selected disabled >Seleccione una unidad de medida...</option>
-                    <option>ramo</option>
+                    <option>monton</option>
                     <option>kilogramo</option>
                     <option>ninguna</option>
                     <option>caja</option>
@@ -503,13 +503,13 @@
                         <div class="form-group" id="viewmodal_harvest_description_jsonDiv">
                             <label>Información Adicional</label> <br />
                             <!-- <input type="text" name="viewmodal_harvest_description_json" class="form-control" id="viewmodal_harvest_description_json" placeholder="Harvest Description JSON"> -->
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_pestfree" value="Pesticide Free" /> Libre de pesticidas<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_certorganic" value="Certified Organic" /> Orgánico Certificado<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_noncertorganic" value="Non-Certified Organic" /> Orgánico no Certificado<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_conventional" value="Conventional" /> Convencional<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_freerange" value="Free Range" /> Rango libre<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_greenhouse" value="Greenhouse Grown" /> Cultivado en Invernadero<br />
-                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_gmo" value="Non-GMO" /> No GMO<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_pestfree" value="Libre de pesticidas" /> Libre de pesticidas<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_certorganic" value="Orgánico certificado" /> Orgánico Certificado<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_noncertorganic" value="Orgánico no certificado" /> Orgánico no Certificado<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_conventional" value="Convencional" /> Convencional<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_freerange" value="Rango Libre" /> Rango libre<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_greenhouse" value="Cultivado en Invernadero" /> Cultivado en Invernadero<br />
+                            <input type="checkbox" name="viewmodal_harvest_description_json[]" id="viewmodal_harvest_description_json_gmo" value="organismo no modificado genéticamente" /> No GMO<br />
                         </div>
 
                         <div class="form-group" , id="viewmodal_harvest_blockchainhashidDiv">
@@ -732,10 +732,10 @@
                                 <label for="viewmodal_market_unitOfMeasure">Unidad de Medida</label>
                                 <select class="custom-select d-block w-100" id="viewmodal_market_unitOfMeasure" name="viewmodal_market_unitOfMeasure">
                     <option value="" selected disabled >Seleccionar Unidad de Medida...</option>
-                    <option>bunch</option>
-                    <option>kilogram</option>
-                    <option>none</option>
-                    <option>box</option>
+                    <option>monton</option>
+                    <option>kilogramo</option>
+                    <option>ninguno</option>
+                    <option>caja</option>
                   </select>
                             </div>
 
@@ -779,7 +779,7 @@
                             <div class="form-group">
                                 <label for="viewmodal_storage_Description">
                                     Descripción del almacenamiento/entrega de productos</label>
-                                <input type="text" name="viewmodal_storage_Description" class="form-control" id="viewmodal_storage_Description" placeholder="Storage Description">
+                                <input type="text" name="viewmodal_storage_Description" class="form-control" id="viewmodal_storage_Description" placeholder="Descripción de Almacenamiento">
                             </div>
 
                             <div class="form-group" id="viewmodal_storage_bool_added_to_blockchainDiv">
@@ -880,7 +880,7 @@
                 var closeButton = $('<input/>').attr({
                     type: "submit",
                     id: "harvestModalClose",
-                    value: 'Close',
+                    value: 'Cerrar',
                     class: "btn btn-secondary",
                     'data-dismiss': "modal"
                 });
@@ -922,31 +922,31 @@
 
                 console.log("harvest_description_json - " + harvest_description_json);
                 if (typeof harvest_description_json !== "undefined") {
-                    if (harvest_description_json.indexOf("Pesticide Free") != -1) {
+                    if (harvest_description_json.indexOf("Libre de pesticidas") != -1) {
                         $("#viewmodal_harvest_description_json_pestfree").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Certified Organic") != -1) {
+                    if (harvest_description_json.indexOf("Orgánico certificado") != -1) {
                         $("viewmodal_harvest_description_json_certorganic").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Non-Certified Organic") != -1) {
+                    if (harvest_description_json.indexOf("Orgánico no certificado") != -1) {
                         $("#viewmodal_harvest_description_json_noncertorganic").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Conventional") != -1) {
+                    if (harvest_description_json.indexOf("Convencional") != -1) {
                         $("#viewmodal_harvest_description_json_conventional").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Free Range") != -1) {
+                    if (harvest_description_json.indexOf("Rango Libre") != -1) {
                         $("#viewmodal_harvest_description_json_freerange").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Greenhouse Grown") != -1) {
+                    if (harvest_description_json.indexOf("Cultivado en Invernadero") != -1) {
                         $("#viewmodal_harvest_description_json_greenhouse").prop("checked", true);
                     }
 
-                    if (harvest_description_json.indexOf("Non-GMO") != -1) {
+                    if (harvest_description_json.indexOf("organismo no modificado genéticamente") != -1) {
                         $("#viewmodal_harvest_description_json_gmo").prop("checked", true);
                     }
                 }
@@ -1025,7 +1025,7 @@
                 var closeButton = $('<input/>').attr({
                     type: "submit",
                     id: "storageModalClose",
-                    value: 'Close',
+                    value: 'Cerrar',
                     class: "btn btn-secondary",
                     'data-dismiss': "modal"
                 });

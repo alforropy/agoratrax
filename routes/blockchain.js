@@ -309,7 +309,7 @@ router.post('/app/storage/save/blockchain', async function (req, res) {
     // {"logID":"231ac393-264a-4516-9e42-56b5f738deed","previouslogID":"","otherIdentifiers":
     // "{sourceID:OZCF, buyerID:}","logDetail":"{produce:Beetroot, description:Fresh beetroot,
     // actionTimeStamp:Thu Dec 30 2021 10:37:00 GMT+0200 (South Africa Standard Time), logQuantity:10(bunch)}",
-    // "logExtendedDetail":"{growingConditions:Pesticide Free,Free Range,Greenhouse Grown}","logMetadata":
+    // "logExtendedDetail":"{growingConditions:Pesticide Free,Rango Libre,Cultivado en Invernadero}","logMetadata":
     // "{logUser:superuserjulz@example.com, logType:harvest, logTableName:foodprint_harvest,
     // harvestPhotoHash:7f21430912a08ced86bf43fcbcceddcdf74343ba80f72a625bff75fd710ede06}"}
 

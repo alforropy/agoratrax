@@ -14,7 +14,7 @@ function storagepdf(data) {
           data[i].supplierproduce +
           ';  Market Name: ' +
           data[i].market_Name +
-          ';  Market Quantity: ' +
+          ';  Cantidad de Mercado: ' +
           data[i].market_quantity +
           ';  Unidad de Medida: ' +
           data[i].market_unitOfMeasure +
