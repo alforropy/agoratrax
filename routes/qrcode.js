@@ -199,7 +199,7 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
   ];
 
   if (supplierProduceID.split('_')[0] === CUSTOM_ENUMS.TEST) {
-    // e.g. https://www.foodprintapp.com/app/scan/TEST_beetroot
+    // e.g. https://www.agoratrax.farm/app/scan/TEST_beetroot
 
     testProvenance = true;
     //return single latest entry for supplierproduce
@@ -275,7 +275,7 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
       var qrid = supplierProduceID; //TODO this is not yet being tracked in config
 
       //http://localhost:3000/app/scan/WMNP_Fennel
-      //https://www.foodprintapp.com/app/scan/WMNP_Fennel
+      //https://www.agoratrax.farm/app/scan/WMNP_Fennel
       var qrurl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
       var request_host = req.get('host');
@@ -363,7 +363,7 @@ router.get('/api/v1/scan/:id', [sanitizeParam('id').escape().trim()], function (
   ];
 
   if (supplierProduceID.split('_')[0] === CUSTOM_ENUMS.TEST) {
-    // e.g. https://www.foodprintapp.com/app/scan/TEST_beetroot
+    // e.g. https://www.agoratrax.farm/app/scan/TEST_beetroot
     //http://localhost:3000/app/api/v1/scan/TEST_Beetroot
 
     testProvenance = true;
@@ -441,7 +441,7 @@ router.get('/api/v1/scan/:id', [sanitizeParam('id').escape().trim()], function (
       var qrid = ''; //TODO this is  t yet being tracked in config
 
       //http://localhost:3000/app/scan/WMNP_Fennel
-      //https://www.foodprintapp.com/app/scan/WMNP_Fennel
+      //https://www.agoratrax.farm/app/scan/WMNP_Fennel
       var qrurl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
       var request_host = req.get('host');

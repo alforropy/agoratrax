@@ -59,7 +59,7 @@ INSERT INTO foodprint_qrcount (
         request_origin,
         request_useragent,
         logdatetime)
-VALUES ('1', '1', 'http://www.foodprintapp.com/checkin/ozcf', 'OZCF',	'host',	'origin', 'useragent',	'2019-11-18 09:25');
+VALUES ('1', '1', 'http://www.agoratrax.farm/checkin/ozcf', 'OZCF',	'host',	'origin', 'useragent',	'2019-11-18 09:25');
 
 
 -- manage qr codes
@@ -83,7 +83,7 @@ INSERT INTO foodprint_qr (
         qrurl,
         qrcode,
         logdatetime)
-VALUES ('1', 'OZCF',	'Check-in',	'Your journey starts here', 'http://www.foodprintapp.com/checkin/ozcf','qrcode',	'2019-11-18 09:25');
+VALUES ('1', 'OZCF',	'Check-in',	'Your journey starts here', 'http://www.agoratrax.farm/checkin/ozcf','qrcode',	'2019-11-18 09:25');
 
 
 -- manage markets on platform
