@@ -246,7 +246,8 @@ router.post(
       if (process.env.NODE_ENV === CUSTOM_ENUMS.DEVELOPMENT) {
         protocol = req.protocol;
       }
-      let final_qrcode_url = protocol + '://' + host + '/app/scan/' + req_supplierproduce;
+      // let final_qrcode_url = protocol + '://' + host + '/app/scan/' + req_supplierproduce;
+      let final_qrcode_url = protocol + '://' + host + '/app/scan/' + storage_logid_uuid;
 
       let data = {
         harvest_logid: harvest_logid_uuid,
