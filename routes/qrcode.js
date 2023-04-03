@@ -172,7 +172,10 @@ router.get(
 //TODO Return Farmers email address as part of provenance_data
 //TODO Update to include marketid '/app/scan/:marketid/:id' 0.e. http://localhost:3000/app/scan/ozcf/WMNP_Fennel
 router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, res) {
-  var supplierProduceID = req.params.id; //OZCF_Apples or WMNP_Fennel
+  // var supplierProduceID = req.params.id; //OZCF_Apples or WMNP_Fennel
+  var storage_logid = req.params.id; //OZCF_Apples or WMNP_Fennel
+
+  console.log("storage_logid", storage_logid)
 
   let weeklyViewQuery;
   let testProvenance;
@@ -198,8 +201,8 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
     'lastmodifieddatetime',
   ];
 
-  if (supplierProduceID.split('_')[0] === CUSTOM_ENUMS.TEST) {
-    // e.g. https://www.agoratrax.farm/app/scan/TEST_beetroot
+  if (storage_logid.split('_')[0] === CUSTOM_ENUMS.TEST) {
+    // e.g. https://www.foodprintapp.com/app/scan/TEST_beetroot
 
     testProvenance = true;
     //return single latest entry for supplierproduce
@@ -208,7 +211,8 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
     weeklyViewQuery = {
       attributes: baseAttributes,
       where: {
-        supplierproduce: supplierProduceID,
+        // supplierproduce: supplierProduceID,
+        storage_logid: storage_logid,
       },
       order: [['logdatetime', 'DESC']],
       limit: 1,
@@ -221,25 +225,26 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
       attributes: baseAttributes,
       where: {
         [Op.and]: [
-          { supplierproduce: supplierProduceID },
-          {
-            logdatetime: {
-              [Op.lt]: Sequelize.literal(
-                '(date(curdate() - interval weekday(curdate()) day + interval 1 week))'
-              ),
-            },
-          },
-          {
-            logdatetime: {
-              [Op.gt]: Sequelize.literal('(date(curdate() - interval weekday(curdate()) day))'),
-            },
-          },
+          { storage_logid: storage_logid },
+          // {
+          //   logdatetime: {
+          //     [Op.lt]: Sequelize.literal(
+          //       '(date(curdate() - interval weekday(curdate()) day + interval 1 week))'
+          //     ),
+          //   },
+          // },
+          // {
+          //   logdatetime: {
+          //     [Op.gt]: Sequelize.literal('(date(curdate() - interval weekday(curdate()) day))'),
+          //   },
+          // },
         ],
       },
     };
   }
   // console.debug('Final provenance SQL query ' + traceSqlFinal);
-  console.debug('Final provenance SQL query params ' + supplierProduceID);
+  // console.debug('Final provenance SQL query params ' + supplierProduceID);
+  console.debug('Final provenance SQL query params ' + storage_logid);
 
   let provenance_data = '';
   models.FoodprintWeeklyview.findAll(weeklyViewQuery)
@@ -272,11 +277,13 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
       //START Track QR Scan (this could be done as xhr when scan page is rendered)
       var marketID = CUSTOM_ENUMS.OZCF; //shortcode e.g. ozcf
       var logid = uuidv4();
-      var qrid = supplierProduceID; //TODO this is not yet being tracked in config
+      // var qrid = supplierProduceID; //TODO this is not yet being tracked in config
+      var qrid = storage_logid; //TODO this is not yet being tracked in config
 
       //http://localhost:3000/app/scan/WMNP_Fennel
-      //https://www.agoratrax.farm/app/scan/WMNP_Fennel
+      //https://www.foodprintapp.com/app/scan/WMNP_Fennel
       var qrurl = req.protocol + '://' + req.get('host') + req.originalUrl;
+      console.log("SCAN RESULT", qrurl)
 
       var request_host = req.get('host');
       var request_origin = req.headers.referer;
