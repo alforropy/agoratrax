@@ -81,9 +81,21 @@
                             </div>
 
                             <!-- START: TRACED ON BLOCKCHAIN  -->
-                            <% if (showTracedOnBlockchain || testRecord){ %>
-                              <div class="probootstrap-section-heading text-center mb50 probootstrap-animate" class="text-center">
-                                  <h4 class="sub-heading">Traced using Blockchain <i class="far fa-check-circle"></i></h4>
+                            <% if ((showTracedOnBlockchain || testRecord) && ( data[0].storage_blockchain_uuid)){ %>
+                              <div class="probootstrap-section-heading text-center mb50 probootstrap-animate" style="margin-top: 40px">
+
+                                     <h3 class="heading">Ver en el Explorador de Blockchain </h3>
+
+                                     <a href="#">ID de Transacción: <%=data[0].storage_blockchain_uuid%> </a></i>
+                                        <div style="display:flex; flex-direction:center; justify-content: center; margin-top: 40px">
+                                            <a href="<%= blockchain_explorer_url %>"
+                                                    style="width:200px"
+                                                    class="btn btn-block btn-xs btn-success text-center"
+                                                    target="_blank">
+                                                Ir al Sitio
+                                            </a>
+                                    </div>
+
                               </div>
                               <% } %>
                             <!-- END: TRACED ON BLOCKCHAIN -->
@@ -94,6 +106,8 @@
                             </div>
                             <!-- END: CONTACT FARMER -->
                         </div>
+
+
                     </div>
                <!--  </div> -->
                 <hr>

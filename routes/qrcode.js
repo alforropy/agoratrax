@@ -199,6 +199,7 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
     'market_storageCaptureTime',
     'logdatetime',
     'lastmodifieddatetime',
+         'storage_blockchain_uuid'
   ];
 
   if (storage_logid.split('_')[0] === CUSTOM_ENUMS.TEST) {
@@ -335,6 +336,7 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
         showTracedOnBlockchain: boolTracedOnBlockchain,
         testRecord: testProvenance,
         page_name: 'scanresult',
+        blockchain_explorer_url: process.env.BLOCKCHAIN_EXPLORER_URL+provenance_data[0].storage_blockchain_uuid
       });
     });
 });
@@ -367,6 +369,7 @@ router.get('/api/v1/scan/:id', [sanitizeParam('id').escape().trim()], function (
     'market_storageCaptureTime',
     'logdatetime',
     'lastmodifieddatetime',
+     'storage_blockchain_uuid'
   ];
 
   if (supplierProduceID.split('_')[0] === CUSTOM_ENUMS.TEST) {

@@ -12,6 +12,7 @@ var models = initModels(sequelise);
 var account1_mnemonic = process.env.ACCOUNT1_MNEMONIC;
 var account2_mnemonic = process.env.ACCOUNT2_MNEMONIC; // account against which supply chain data is logged from web
 // var account3_mnemonic = process.env.ACCOUNT3_MNEMONIC; // account against which supply chain data is logged from whatsapp
+var BLOCKCHAIN_EXPLORER_URL = process.env.BLOCKCHAIN_EXPLORER_URL
 
 console.log('Account Mnemonic 1 from user = ' + account1_mnemonic);
 console.log('Account Mnemonic 2 from user = ' + account2_mnemonic);
@@ -150,7 +151,7 @@ router.get('/app/test/blockchain/algod', async function (req, res) {
 router.post('/app/harvest/save/blockchain', async function (req, res) {
   console.log(
     'Now logging supply chain harvest data from %s to %s... ' +
-      'Assumes source account has funds to pay fees',
+    'Assumes source account has funds to pay fees',
     recoveredAccount1.addr,
     recoveredAccount2.addr
   );
@@ -245,8 +246,8 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
     harvest_bool_added_to_blockchain: true,
     harvest_added_to_blockchain_by: addToBlockchainUser,
     harvest_blockchain_uuid: transactionId,
-    blockchain_explorer_url:
-      'https://goalseeker.purestake.io/algorand/testnet/transaction/' + transactionId,
+    // blockchain_explorer_url:      'https://goalseeker.purestake.io/algorand/testnet/transaction/' + transactionId,
+    blockchain_explorer_url: BLOCKCHAIN_EXPLORER_URL + transactionId,
   };
   try {
     models.FoodprintHarvest.update(data, {
@@ -257,22 +258,22 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
       .then(_ => {
         console.log(
           'Registro de Cosecha entry with logid ' +
-            logId +
-            ' updated with blockchain data for ' +
-            'Algorand transaction ' +
-            transactionId +
-            '!'
+          logId +
+          ' updated with blockchain data for ' +
+          'Algorand transaction ' +
+          transactionId +
+          '!'
         );
       })
       .catch(err => {
         //throw err;
         console.log(
           'Error - Update Registro de Cosecha entry logid ' +
-            logId +
-            ' with blockchain data failed ' +
-            'for Algorand transaction ' +
-            transactionId +
-            '!'
+          logId +
+          ' with blockchain data failed ' +
+          'for Algorand transaction ' +
+          transactionId +
+          '!'
         );
         console.log(err);
         return false;
@@ -281,11 +282,11 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
     //this will eventually be handled by your error handling middleware
     console.log(
       'Registro de Cosecha entry with logid ' +
-        logId +
-        ' not updated with blockchain data for Algorand ' +
-        'transaction ' +
-        transactionId +
-        '.'
+      logId +
+      ' not updated with blockchain data for Algorand ' +
+      'transaction ' +
+      transactionId +
+      '.'
     );
     console.log(e);
     return false;
@@ -296,7 +297,7 @@ function updateHarvestBlockchainHash(logId, supplyChainData, user, transactionId
 router.post('/app/storage/save/blockchain', async function (req, res) {
   console.log(
     'Now logging supply chain storage data from %s to %s... ' +
-      'Assumes source account has funds to pay fees',
+    'Assumes source account has funds to pay fees',
     recoveredAccount1.addr,
     recoveredAccount2.addr
   );
@@ -367,7 +368,57 @@ router.post('/app/storage/save/blockchain', async function (req, res) {
   });
 });
 
-function updateStorageBlockchainHash(logId, supplyChainData, user, transactionId) {
+
+function updateWeeklyStorageBlockchainHash(storage_logid, data) {
+
+  console.log("====================================================\n\n")
+  console.log("UPDATING WEEKLY VIEW DATA")
+  console.log(data)
+    try {
+    models.FoodprintWeeklyview.update(data, {
+      where: {
+        storage_logid: storage_logid,
+      },
+    })
+      .then(_ => {
+        console.log(
+          'Weekly Data with storage id  ' +
+          storage_logid +
+          ' updated with blockchain data for ' +
+          'Algorand transaction ' +
+          data.storage_blockchain_uuid +
+          '!'
+        );
+      })
+      .catch(err => {
+        //throw err;
+        console.log(err)
+        console.log(
+          'Error - Update Weekly with Storage logbook entry with logid ' +
+          storage_logid +
+          ' for Algorand transaction ' +
+          data.storage_blockchain_uuid +
+          'failed!'
+        );
+        console.log(err);
+        return false;
+      });
+  } catch (e) {
+    //this will eventually be handled by your error handling middleware
+    console.log(
+      'Storage logbook entry with logid ' +
+      storage_logid +
+      ' not updated for Algorand transaction ' +
+      data.storage_blockchain_uuid +
+      '.'
+    );
+    console.log(e);
+    return false;
+  }
+
+
+}
+function updateStorageBlockchainHash(storage_logid, supplyChainData, user, transactionId) {
   let supplyChainDataHash = crypto.createHash('sha256').update(supplyChainData).digest('base64');
 
   let logdatetime = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
@@ -379,42 +430,46 @@ function updateStorageBlockchainHash(logId, supplyChainData, user, transactionId
   // actionTimeStamp:Fri Dec 31 2021 10:42:00 GMT+0200 (South Africa Standard Time), logQuantity:10(bunch)}",
   // "logExtendedDetail":"{}","logMetadata":"{logUser:superuserjulz@example.com, logType:storage,
   // logTableName:foodprint_storage, storagePhotoHash:NaN"}
-
   let data = {
-    storage_logid: logId,
-    storage_BlockchainHashID: supplyChainDataHash,
+   storage_BlockchainHashID: supplyChainDataHash,
     storage_BlockchainHashData: supplyChainData,
     storage_added_to_blockchain_date: logdatetime,
     storage_bool_added_to_blockchain: true,
     storage_added_to_blockchain_by: user.email,
     storage_blockchain_uuid: transactionId,
-    blockchain_explorer_url:
-      'https://goalseeker.purestake.io/algorand/testnet/transaction/' + transactionId,
+
+  }
+  let storage_data = {
+    ...data,
+    // blockchain_explorer_url:'https://goalseeker.purestake.io/algorand/testnet/transaction/' + transactionId,
+    blockchain_explorer_url: BLOCKCHAIN_EXPLORER_URL + transactionId
   };
   try {
-    models.FoodprintStorage.update(data, {
+    models.FoodprintStorage.update(storage_data, {
       where: {
-        storage_logid: logId,
+        storage_logid: storage_logid,
       },
     })
       .then(_ => {
         console.log(
           'Storage logbook entry with logid ' +
-            logId +
-            ' updated with blockchain data for ' +
-            'Algorand transaction ' +
-            transactionId +
-            '!'
+          storage_logid +
+          ' updated with blockchain data for ' +
+          'Algorand transaction ' +
+          transactionId +
+          '!'
         );
+
+        updateWeeklyStorageBlockchainHash(storage_logid, data)
       })
       .catch(err => {
         //throw err;
         console.log(
           'Error - Update Storage logbook entry with logid ' +
-            logId +
-            ' for Algorand transaction ' +
-            transactionId +
-            'failed!'
+          storage_logid +
+          ' for Algorand transaction ' +
+          transactionId +
+          'failed!'
         );
         console.log(err);
         return false;
@@ -423,10 +478,10 @@ function updateStorageBlockchainHash(logId, supplyChainData, user, transactionId
     //this will eventually be handled by your error handling middleware
     console.log(
       'Storage logbook entry with logid ' +
-        logId +
-        ' not updated for Algorand transaction ' +
-        transactionId +
-        '.'
+      storage_logid +
+      ' not updated for Algorand transaction ' +
+      transactionId +
+      '.'
     );
     console.log(e);
     return false;
