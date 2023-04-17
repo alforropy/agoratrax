@@ -788,3 +788,7 @@
         font-size: 1.7rem !important;
     }
 }
+
+.form-columns-2 , .form-columns-1{
+    border: none
+}
