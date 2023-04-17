@@ -1,0 +1,1707 @@
+
+
+
+
+
+
+
+
+/* 1a. Containers */
+
+
+
+
+
+
+
+
+
+/* 1b. Colors */
+
+
+
+
+
+
+
+/* 1c. Typography */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1d. Buttons */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1e. Forms */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1f. Icons */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1g. Cards */
+
+
+
+
+
+
+
+
+
+
+
+/* 1h. Tables */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1i. Website header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1j. Website footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Drag and drop layout styles */
+
+.dnd-section {
+  padding: 60px 20px;
+}
+
+/* Padding on blog post sections */
+
+.blog-post-section {
+  padding: 60px 0;
+}
+
+/* .content-wrapper is used for blog post and system templates and .header-wrapper is used for the website header module */
+
+.dnd-section > .row-fluid,
+.content-wrapper,
+.header__wrapper {
+  max-width: 1110px;
+}
+
+
+
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  background-color: #ffffff;
+  color: #141414;
+  font-size: 16px;
+}
+
+/* Paragraphs */
+
+p {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+}
+
+/* Anchors */
+
+a {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #00e394;
+}
+
+a:hover,
+a:focus {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #06a56e;
+}
+
+a:active {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #56f5be;
+}
+
+/* Headings */
+
+h1 {
+  font-family: Anton, sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Anton, sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 55px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: Anton, sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 500; text-decoration: none;
+  color: #231f20;
+  font-size: 18px;
+  text-transform: none;
+}
+
+h5 {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 16px;
+  text-transform: none;
+}
+
+h6 {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 13px;
+  text-transform: none;
+}
+
+@media(max-width: 767px){
+  /* Headings */
+ h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  h3 {
+    font-size: 1.8rem !important;
+  }
+
+  h4 {
+    font-size: 1.5rem !important;
+  }
+
+  h5 {
+    font-size: 1.3rem !important;
+  }
+}
+@media(max-width: 479px){
+  /* Headings */
+ h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+@media(max-width: 390px){
+  /* Headings */
+ h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  h4,h5 {
+    font-size: 1.1rem !important;
+  }
+  .hs_cos_wrapper_type_rich_text p, 
+  .hs_cos_wrapper_type_rich_text p span {
+   font-size: 1rem !important;
+    line-height: 1.5;
+  }
+  
+}
+/* Blockquotes */
+
+blockquote {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  border-left-color: #ffffff;
+  color: #231f20;
+  font-size: 24px;
+}
+
+blockquote > footer {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  font-size: 16px;
+}
+
+/* Horizontal rules */
+
+hr {
+  border-bottom-color: #01e7fd;
+}
+
+
+
+
+
+/* Primary button */
+
+button,
+.button,
+.hs-button {
+  border: 2px solid #00e394;
+
+  padding-top: 8px;
+padding-right: 16px;
+padding-bottom: 8px;
+padding-left: 16px;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 0.0)
+
+;
+  border-radius: 10px;
+  color: #00e394;
+  fill: #00e394;
+  font-size: 18px;
+  text-transform: none;
+}
+
+button:hover,
+button:focus,
+button:active,
+.button:hover,
+.button:focus,
+.button:active,
+.hs-button:hover,
+.hs-button:focus,
+.hs-button:active {
+  border: 2px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+button:active,
+.button:active,
+.hs-button:active {
+  border: 2px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: rgba(80, 255, 228, 100);
+  border-color: #50ffe4;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+/* Secondary button */
+
+.button.button--secondary {
+  border: 1px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 0.0)
+
+;
+  border-radius: 0px;
+  color: #00e394;
+  fill: #00e394;
+  text-transform: none;
+}
+
+.button.button--secondary:hover,
+.button.button--secondary:focus,
+.button.button--secondary:active {
+  border: 1px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.button.button--secondary:active {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: rgba(80, 255, 228, 100);
+  border: 1px solid #00e394;
+
+  border-color: #50ffe4;
+  color: #ffffff;
+  fill: #ffffff;
+}
+.button.button--banner-outline-green {
+  background-color:white;
+  color:#00e394;
+  border-color:#00e394;
+}
+.button.button--banner-outline-green:hover {
+  background-color:#00e394;
+  color:white;
+  border-color:white;
+}
+.button.button--banner-outline-cyan {
+  background-color:white;
+  color:#02e7fe;
+  border-color:#02e7fe;
+}
+.button.button--banner-outline-cyan:hover {
+  background-color:#02e7fe;
+  color:white;
+  border-color:white;
+}
+/* Simple button */
+
+.button.button--simple {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #00e394;
+  fill: #00e394;
+}
+
+.button.button--simple:hover,
+.button.button--simple:focus {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #06a56e;
+  fill: #06a56e;
+}
+
+.button.button--simple:active {
+  font-weight: normal; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #56f5be;
+  fill: #56f5be;
+}
+
+/* Button sizing */
+
+.button.button--small {
+  padding-top: 8px;
+padding-right: 16px;
+padding-bottom: 8px;
+padding-left: 16px;
+
+  font-size: 14px;
+}
+
+.button.button--large {
+  padding-top: 8px;
+padding-right: 16px;
+padding-bottom: 8px;
+padding-left: 16px;
+
+  font-size: 20px;
+}
+
+
+
+
+
+/* Form */
+
+form {
+  border: 1px none #f9f9f9;
+
+  padding: 45px;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(249, 249, 249, 1.0)
+
+;
+  border-radius: 0px;
+}
+
+/* Form title */
+
+.form-title {
+  border: 1px none #00e394;
+
+  padding: 21px;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  color: #999999;
+  font-size: 23px;
+  text-transform: ;
+}
+
+/* Labels */
+
+form label {
+  padding-top: 6px;
+padding-right: 0px;
+padding-bottom: 6px;
+padding-left: 0px;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #141414;
+  font-size: 16px;
+}
+
+/* Help text */
+
+form legend {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #141414;
+  font-size: 14px;
+}
+
+/* Form fields */
+
+form input[type='text'],
+form input[type='email'],
+form input[type='password'],
+form input[type='tel'],
+form input[type='number'],
+form input[type='search'],
+form select,
+form textarea {
+  border: 1px none #01e7fd;
+
+  padding: 15px;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  border-radius: 0px;
+  color: #141414;
+  font-size: 16px;
+}
+
+/* Form fields - placeholders */
+
+::-webkit-input-placeholder {
+  color: #141414;
+}
+
+::-moz-placeholder {
+  color: #141414;
+}
+
+:-ms-input-placeholder {
+  color: #141414;
+}
+
+:-moz-placeholder {
+  color: #141414;
+}
+
+::placeholder {
+  color: #141414;
+}
+
+/* Form fields - date picker */
+
+form .hs-dateinput:before {
+  right: 15px;
+}
+
+form .pika-table thead th {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  color: #ffffff;
+}
+
+form td.is-today .pika-button {
+  color: #231f20;
+}
+
+form .is-selected .pika-button {
+  background-color: #ffffff;
+  color: #231f20;
+}
+
+form .pika-button:hover {
+  background-color: #00E394 !important;
+}
+
+/* Headings and text */
+
+form .hs-richtext,
+form .hs-richtext p,
+form .hs-richtext h1,
+form .hs-richtext h2,
+form .hs-richtext h3,
+form .hs-richtext h4,
+form .hs-richtext h5,
+form .hs-richtext h6 {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #141414;
+}
+
+/* GDPR */
+
+form .legal-consent-container,
+form .legal-consent-container .hs-richtext,
+form .legal-consent-container .hs-richtext p {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #141414;
+  font-size: 14px;
+}
+
+/* Submit button */
+
+
+
+form input[type='submit'],
+form .hs-button {
+  border: 2px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 0.0)
+
+;
+  border-radius: 10px;
+  color: #00e394;
+  text-transform: none;
+}
+
+form input[type='submit']:hover,
+form input[type='submit']:focus,
+form .hs-button:hover,
+form .hs-button:focus {
+  border: 2px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  color: #FFFFFF;
+}
+
+form input[type='submit']:active,
+form .hs-button:active {
+  border: 2px solid #00e394;
+
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 700; text-decoration: none;
+  background-color: rgba(80, 255, 228, 100);
+  border-color: #50ffe4;
+  color: #FFFFFF;
+}
+
+
+
+
+
+form input[type='submit'],
+form .hs-button {
+  padding-top: 8px;
+padding-right: 16px;
+padding-bottom: 8px;
+padding-left: 16px;
+
+  font-size: 20px;
+}
+
+
+
+/* Inline thank you message */
+
+.submitted-message {
+  border: 1px none #f9f9f9;
+
+  padding: 45px;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(249, 249, 249, 1.0)
+
+;
+  border-radius: 0px;
+}
+
+
+
+
+/* This make the svg file scalable on responsiveness */
+img[src$=".svg"] {
+  max-width: 100%;
+  height: fit-content;
+}
+/* Default icon (regular/dark) */
+
+.icon {
+  padding: 15px;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  /*background-image: url(https://20029847.fs1.hubspotusercontent-na1.net/hubfs/20029847/Farmer%20Connect%20Live%20Assets/svg/Diamond_white.svg);
+  background-size: contain; */
+}
+/* .icon:hover {
+  background-image: url(https://20029847.fs1.hubspotusercontent-na1.net/hubfs/20029847/Farmer%20Connect%20Live%20Assets/svg/Diamond_green.svg);
+  background-color: transparent !important;
+} */
+.icon svg {
+  fill: #ffffff;
+  /*fill: #141414; */
+  height: 16px;
+  width: 16px;
+}
+
+/* .icon:hover svg{
+  fill: white;
+} */
+
+/* Light icon */
+
+.icon--light .icon {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+.icon--light svg {
+  fill: #00e394;
+}
+
+/* Size */
+
+.icon--small svg {
+  height: 12px;
+  width: 12px;
+}
+
+.icon--small .icon {
+  padding: 10px;
+
+}
+
+.icon--large svg {
+  height: 24px;
+  width: 24px;
+}
+
+.icon--large .icon {
+  padding: 25px;
+
+}
+
+
+
+
+
+/* Table */
+
+table {
+  border: 1px solid #01e7fd;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+/* Table cells */
+
+th,
+td {
+  border: 1px solid #01e7fd;
+
+  padding: 10px;
+
+  color: #231f20;
+}
+
+/* Table header */
+
+thead th,
+thead td {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(0, 227, 148, 1.0)
+
+;
+  color: #ffffff;
+}
+
+/* Table footer */
+
+tfoot th,
+tfoot td {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  color: #231f20;
+}
+
+
+
+
+
+/* Header container */
+
+.header {
+  
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+}
+
+/* Header content color */
+
+.header p,
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5,
+.header h6,
+.header a:not(.button),
+.header span,
+.header div,
+.header li,
+.header blockquote,
+.header .tabs__tab,
+.header .tabs__tab:hover,
+.header .tabs__tab:focus,
+.header .tabs__tab:active {
+  color: #231f20;
+}
+
+/* Header top bar */
+
+.header__top {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+/* Language switcher */
+
+.header__language-switcher-current-label > span {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.header__language-switcher:hover .header__language-switcher-current-label > span,
+.header__language-switcher:focus .header__language-switcher-current-label > span {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #000000;
+}
+
+.header__language-switcher-child-toggle svg {
+  fill: #231f20;
+}
+
+/* Language switcher - submenu */
+
+.header__language-switcher .lang_list_class {
+  border-color: #01e7fd;
+}
+
+.header__language-switcher .lang_list_class li {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+.header__language-switcher .lang_list_class a:not(.button) {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.header__language-switcher .lang_list_class a:hover,
+.header__language-switcher .lang_list_class a:focus {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  color: #000000;
+}
+
+.header__language-switcher .lang_list_class a:active {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+/* Logo */
+
+.header__logo-company-name {
+  font-family: Anton, sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #231f20;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+/* Menu */
+
+@media (max-width: 767px) {
+  .header__menu--mobile {
+    background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  }
+}
+
+/* Menu items */
+
+.header__menu-link {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  font-size: 16px;
+  text-transform: none;
+}
+
+@media (max-width: 767px) {
+  .header__menu-item--depth-1 {
+    border-top: 1px solid #01e7fd;
+  }
+}
+
+/* Menu items - top level */
+
+.header__menu-item--depth-1 > .header__menu-link:not(.button) {
+  color: #231f20;
+}
+
+.header__menu-item--depth-1 > .header__menu-link:hover,
+.header__menu-item--depth-1 > .header__menu-link:focus {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #000000;
+}
+
+.header__menu-item--depth-1 > .header__menu-link:active {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #505050;
+}
+
+.header__menu-item--depth-1 > .header__menu-link--active-link:not(.button) {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #000000;
+}
+
+.header__menu-item--depth-1 .header__menu-child-toggle svg {
+  fill: #231f20;
+}
+
+/* Menu items - submenus */
+
+.header__menu-submenu {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  border-color: #01e7fd;
+}
+
+.header__menu-submenu .header__menu-link:not(.button) {
+  color: #231f20;
+}
+
+.header__menu-submenu .header__menu-item:hover,
+.header__menu-submenu .header__menu-item:focus {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+.header__menu-submenu .header__menu-link:hover,
+.header__menu-submenu .header__menu-link:focus {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #000000;
+}
+
+.header__menu-submenu .header__menu-link:active {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+.header__menu-submenu .header__menu-link--active-link:not(.button) {
+  color: ;
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+}
+
+/* Menu icons */
+
+.header__menu-toggle svg {
+  fill: #231f20;
+}
+
+
+
+
+
+/* Footer container */
+
+.footer {
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(20, 36, 33, 1.0)
+
+;
+}
+#hs_cos_wrapper_widget_1643281174115_ img{
+  width:100%;
+}
+/* Footer content color */
+
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer p,
+.footer a:not(.button),
+.footer span,
+.footer div,
+.footer li,
+.footer blockquote,
+.footer .tabs__tab,
+.footer .tabs__tab:hover,
+.footer .tabs__tab:focus,
+.footer .tabs__tab:active {
+  color: #fff;
+}
+
+.footer hr {
+  border-bottom-color: #fff !important;
+}
+
+/* Footer menu */
+footer .hs-menu-wrapper li {
+  text-align:left;
+}
+.footer .hs-menu-wrapper a {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  text-transform: none;
+  text-align:center;
+}
+
+.footer .hs-menu-wrapper a:hover,
+.footer .hs-menu-wrapper a:focus {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #00e394;
+}
+
+.footer .hs-menu-wrapper a:active {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+  color: #50ffe4;
+}
+
+.footer .hs-menu-wrapper .active > a {
+  font-weight: bold; text-decoration: underline; font-family: 'Red Hat Text', sans-serif; font-style: normal;
+  color: #00e394;
+}
+footer .hs_cos_wrapper_type_blog_subscribe h3 {
+  text-align: center;
+}
+footer .form-title {
+  border:0;
+  background: transparent;
+}
+footer .form-title ~ div>form{
+  background: transparent;
+  position:relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+footer .form-title ~ div>form *:not(input){
+  color: #fff;
+}
+footer .submitted-message {
+    padding: 25px;
+    background-color: rgb(38 38 38);
+    border-radius: 8px;
+}
+footer form .inputs-list>li {
+  display: inline-block;
+}
+footer form .hs-form-field {
+  margin-bottom: 10px;
+}
+
+footer form .hs-input {
+  color: #141414 !important;
+}
+footer form a.hs-button.large.primary {
+  position: absolute;
+  right: 0;
+  width: 140px;
+  top: 36px;
+  right: 40px;
+}
+footer form .legal-consent-container, 
+footer form .legal-consent-container .hs-richtext, 
+footer form .legal-consent-container .hs-richtext p {
+  color:white;
+  margin-bottom: 10px;
+}
+footer form .legal-consent-container .inputs-list>li {
+    width: 100%;
+      margin-bottom: 0;
+}
+@media(max-width: 767px){
+  footer .hs-menu-wrapper ul {
+    display: block !important;
+  }
+  footer .hs-menu-wrapper li {
+    margin-right: 10px;
+    display:inline-block;
+  }
+  footer .form-title ~ div>form {
+    padding-left:0;
+    padding-right:0;
+  }
+  footer form a.hs-button.large.primary{
+    right: 0px;
+  }
+}
+
+
+
+
+/* Dark card */
+
+.card--dark {
+  border: 1px solid #231f20;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(35, 31, 32, 1.0)
+
+;
+  border-radius: 0px;
+  color: #ffffff;
+}
+
+.card--dark summary,
+.card--dark p,
+.card--dark h1,
+.card--dark h2,
+.card--dark h3,
+.card--dark h4,
+.card--dark h5,
+.card--dark h6,
+.card--dark a:not(.button),
+.card--dark span,
+.card--dark div,
+.card--dark li,
+.card--dark blockquote {
+  color: #ffffff;
+}
+
+/* Light card */
+
+.card--light {
+  border: 1px solid #01e7fd;
+
+  background-color: 
+
+  
+  
+    
+  
+
+
+  rgba(255, 255, 255, 1.0)
+
+;
+  border-radius: 0px;
+  color: #231f20;
+}
+
+.card--light summary,
+.card--light p,
+.card--light h1,
+.card--light h2,
+.card--light h3,
+.card--light h4,
+.card--light h5,
+.card--light h6,
+.card--light a:not(.button),
+.card--light span,
+.card--light div,
+.card--light li,
+.card--light blockquote {
+  color: #231f20;
+}
+
+
+
+
+
+/* Error templates */
+
+.error-page:before {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.banner-system-page .rd-banner-center-heading {
+    margin-bottom: 10px;
+}
+.banner-system-page .rd-banner-center-module {
+    padding: 100px 20px 20px;
+}
+/* System templates */
+
+#email-prefs-form,
+#email-prefs-form h1,
+#email-prefs-form h2 {
+  color: #141414;
+}
+
+/* Search template */
+
+.hs-search-results__title {
+  font-size: 55px;
+}
+
+/* Backup unsubscribe template */
+
+.backup-unsubscribe input[type='email'] {
+  font-size: 16px !important;
+  padding: padding: 15px;
+ !important;
+}
+
+
+
+
+img {
+  pointer-events: none;
+}
+/* Set image graysale color */
+.grayscale-img {
+  filter: grayscale(100%);
+}
+/* Accordion */
+
+.accordion__summary,
+.accordion__summary:before {
+  font-family: 'Red Hat Text', sans-serif; font-style: normal; font-weight: 500; text-decoration: none;
+  font-size: 18px;
+}
+
+.card--dark .accordion__summary:before {
+  color: #ffffff;
+}
+
+.card--light .accordion__summary:before {
+  color: #231f20;
+}
+
+/* Blog listing, recent posts, related posts, and blog post */
+
+.blog-listing__post-title {
+    margin-bottom: 0.7rem;
+    line-height: 1.2;
+    text-transform: unset;
+    font-size: 1.3rem;
+}
+
+a.blog-listing__post-title-link {
+  color: #231f20;
+  font-weight: 700 !important;
+  text-decoration: none;
+  font-family: 'Red Hat Text', sans-serif  !important;
+}
+
+.blog-listing__post-tag {
+  color: #141414;
+}
+
+.blog-listing__post-tag:hover,
+.blog-listing__post-tag:focus {
+  color: #000000;
+}
+
+.blog-listing__post-tag:active {
+  color: #646464;
+}
+
+.blog-listing__post-author-name,
+.blog-post__author-name {
+  color: #141414;
+}
+
+.blog-listing__post-author-name :hover,
+.blog-listing__post-author-name :focus,
+.blog-post__author-name:hover,
+.blog-post__author-name:focus {
+  color: #000000;
+}
+
+.blog-listing__post-author-name :active,
+.blog-post__author-name:active {
+  color: #646464;
+}
+
+/* Image gallery */
+
+.image-gallery__close-button-icon:hover,
+.image-gallery__close-button-icon:focus {
+  background-color: rgba(0, 147, 68, 1.0);
+}
+
+.image-gallery__close-button-icon:active {
+  background-color: rgba(80, 255, 228, 1.0);
+}
+
+.icon--light .image-gallery__close-button-icon:hover,
+.icon--light .image-gallery__close-button-icon:focus {
+  background-color: rgba(175, 175, 175, 1.0);
+}
+
+.icon--light .image-gallery__close-button-icon:active {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+/* Pagination */
+
+.pagination__link-icon svg {
+  fill: #00e394;
+  height: 16px;
+  width: 16px;
+}
+
+.pagination__link:hover .pagination__link-icon svg,
+.pagination__link:focus .pagination__link-icon svg {
+  fill: #06a56e;
+}
+
+.pagination__link:active .pagination__link-icon svg {
+  fill: #50ffe4;
+}
+
+.pagination__link--active {
+  border-color: #01e7fd
+}
+
+/* Pricing card */
+
+.pricing-card__heading {
+  background-color: #00E394;
+}
+
+/* Social follow and social sharing */
+
+.social-follow__icon:hover,
+.social-follow__icon:focus,
+.social-sharing__icon:hover,
+.social-sharing__icon:focus {
+  background-color: rgba(0, 147, 68, 1.0);
+}
+
+.social-follow__icon:active,
+.social-sharing__icon:active {
+  background-color: rgba(80, 255, 228, 1.0);
+}
+
+.icon--light .social-follow__icon:hover,
+.icon--light .social-follow__icon:focus,
+.icon--light .social-sharing__icon:hover,
+.icon--light .social-sharing__icon:focus {
+  background-color: rgba(175, 175, 175, 1.0);
+}
+
+.icon--light .social-follow__icon:active,
+.icon--light .social-sharing__icon:active {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+/* Tabs */
+
+.tabs__tab,
+.tabs__tab:hover,
+.tabs__tab:focus,
+.tabs__tab:active {
+  border-color: #141414;
+  color: #141414;
+}
+/** Landing page ***/
+.hs-landing-page .header__menu-col,
+.hs-landing-page .header__button-col{
+  visibility: hidden;
+}
+.hs_submit.hs-submit {
+  display: inline-block;
+}
+.social-follow .icon svg {
+  width: 30px;
+  height: 30px;
+}
+body .slick-prev, 
+body .slick-next {
+  width: 30px;
+  height:40px;
+}
+@media(max-width: 320px){
+  button.slick-arrow {
+    display:none!important;
+  }
+}
+.footer .right-reserved {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 1;
+}
+.footer .right-reserved span {
+  position: absolute;
+  display: block;
+  top: 0;
+}
