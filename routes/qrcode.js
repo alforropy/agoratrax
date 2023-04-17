@@ -168,6 +168,24 @@ router.get(
   }
 );
 
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
 //return template with scan results for produce 0.e. http://localhost:3000/app/scan/WMNP_Fennel
 //TODO Return Farmers email address as part of provenance_data
 //TODO Update to include marketid '/app/scan/:marketid/:id' 0.e. http://localhost:3000/app/scan/ozcf/WMNP_Fennel
@@ -199,7 +217,8 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
     'market_storageCaptureTime',
     'logdatetime',
     'lastmodifieddatetime',
-         'storage_blockchain_uuid'
+    'storage_blockchain_uuid',
+    'storage_BlockchainHashData'
   ];
 
   if (storage_logid.split('_')[0] === CUSTOM_ENUMS.TEST) {
@@ -336,7 +355,9 @@ router.get('/scan/:id', [sanitizeParam('id').escape().trim()], function (req, re
         showTracedOnBlockchain: boolTracedOnBlockchain,
         testRecord: testProvenance,
         page_name: 'scanresult',
-        blockchain_explorer_url: process.env.BLOCKCHAIN_EXPLORER_URL+provenance_data[0].storage_blockchain_uuid
+        blockchain_explorer_url: process.env.BLOCKCHAIN_EXPLORER_URL+provenance_data[0].storage_blockchain_uuid,
+        // blockchain_data: syntaxHighlight(JSON.stringify(JSON.parse(provenance_data[0].storage_BlockchainHashData), undefined, 4))
+        blockchain_data: provenance_data[0].storage_BlockchainHashData
       });
     });
 });
@@ -369,7 +390,8 @@ router.get('/api/v1/scan/:id', [sanitizeParam('id').escape().trim()], function (
     'market_storageCaptureTime',
     'logdatetime',
     'lastmodifieddatetime',
-     'storage_blockchain_uuid'
+    'storage_blockchain_uuid',
+    'storage_BlockchainHashData'
   ];
 
   if (supplierProduceID.split('_')[0] === CUSTOM_ENUMS.TEST) {
@@ -632,7 +654,7 @@ router.post(
             req.flash(
               'success',
               'New QR Code Configuration added successfully! QR Code company name = ' +
-                req.body.qrcode_company_name
+              req.body.qrcode_company_name
             );
             res.redirect('/app/qrcode');
           })
@@ -727,7 +749,7 @@ router.post(
             req.flash(
               'success',
               'Updated QR Code Configuration added successfully! QR Code company name = ' +
-                req.body.qrcode_company_name
+              req.body.qrcode_company_name
             );
             res.redirect('/app/qrcode');
           })
@@ -773,10 +795,10 @@ router.post('/qrcode/delete', [], function (req, res) {
         req.flash(
           'success',
           'QR Code deleted successfully! QRCODE ID = ' +
-            req.body.qrcode_logid2 +
-            ' and name = ' +
-            req.body.qrcode_company_name2 +
-            ' as well as all related Attributes'
+          req.body.qrcode_logid2 +
+          ' and name = ' +
+          req.body.qrcode_company_name2 +
+          ' as well as all related Attributes'
         );
         res.redirect('/app/qrcode');
       })

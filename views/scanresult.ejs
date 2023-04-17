@@ -5,6 +5,18 @@
           <%- include('partials/head'); %>
       <link rel="stylesheet" href="/css/timeline.css" />
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <style>
+  .blockchain-data {
+  outline: 1px solid #ccc;
+  padding: 5px; margin: 5px;
+  border: 2px solid gray;
+   border-radius:10px;
+   width: 50%;
+   text-align: center;
+  }
+
+  </style>
   </head>
   <body>
      <!-- START: header -->
@@ -86,7 +98,7 @@
 
                                      <h3 class="heading">Ver en el Explorador de Blockchain </h3>
 
-                                     <a href="#">ID de Transacción: <%=data[0].storage_blockchain_uuid%> </a></i>
+                                     <a  target="_blank"  href="<%= blockchain_explorer_url %>">ID de Transacción: <%=data[0].storage_blockchain_uuid%> </a></i>
                                         <div style="display:flex; flex-direction:center; justify-content: center; margin-top: 40px">
                                             <a href="<%= blockchain_explorer_url %>"
                                                     style="width:200px"
@@ -95,7 +107,14 @@
                                                 Ir al Sitio
                                             </a>
                                     </div>
+                                     <div style="display:flex; flex-direction:column; align-items: center; margin-top: 40px">
 
+                                       <h3 class="heading">Datos Almacenados en el Blockchain</h3>
+
+                                        <div class="blockchain-data " >
+                                            <%- blockchain_data %>
+                                        </div>
+                                    </div>
                               </div>
                               <% } %>
                             <!-- END: TRACED ON BLOCKCHAIN -->
